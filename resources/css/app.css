@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-flame: #f15025;
+  --color-alabaster: #e6e8e6;
+  --color-dust: #ced0ce;
+  --color-carbon: #191919;
+}
