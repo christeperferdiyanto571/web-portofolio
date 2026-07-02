@@ -1753,9 +1753,11 @@
 
     // Initialize Certifications Swiper
     new Swiper('.cert-swiper', {
-        effect: 'cards',
         grabCursor: true,
         loop: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 20,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
