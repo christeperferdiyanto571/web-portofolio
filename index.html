@@ -1753,11 +1753,18 @@
 
     // Initialize Certifications Swiper
     new Swiper('.cert-swiper', {
+        effect: 'coverflow',
         grabCursor: true,
-        loop: true,
-        slidesPerView: 'auto',
         centeredSlides: true,
-        spaceBetween: 20,
+        slidesPerView: 'auto',
+        loop: true,
+        coverflowEffect: {
+            rotate: 25,
+            stretch: 0,
+            depth: 150,
+            modifier: 1.2,
+            slideShadows: false, // MATIKAN BAYANGAN AGAR HP TIDAK CRASH
+        },
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
