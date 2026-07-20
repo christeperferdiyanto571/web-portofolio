@@ -506,7 +506,7 @@
                 [
                     'title' => 'SPK Bantuan Sosial Desa',
                     'category' => 'Web Development',
-                    'image' => asset('SPK.PNG'),
+                    'image' => asset('SPK.png'),
                     'color' => 'emerald',
                     'delay' => '400ms',
                     'tags' => [
