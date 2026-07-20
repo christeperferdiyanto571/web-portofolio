@@ -392,245 +392,300 @@
             <p class="text-slate-500 mt-4 font-medium text-lg">A colorful harmony of Data Science and Web Development.</p>
         </div>
 
+        @php
+            $projects = [
+                [
+                    'title' => 'Sales & Order Data Analysis',
+                    'category' => 'Data Analysis',
+                    'image' => '/sales.png',
+                    'color' => 'indigo',
+                    'delay' => '0ms',
+                    'tags' => [
+                        ['name' => 'Excel', 'color' => 'green'],
+                        ['name' => 'Data Analysis', 'color' => 'indigo'],
+                    ],
+                    'desc_short' => 'Comprehensive analysis of sales order data to identify key trends, customer purchasing behaviors, and revenue growth opportunities.',
+                    'desc_full' => 'Proyek ini berfokus pada analisis data penjualan komprehensif menggunakan Microsoft Excel. Melalui pemrosesan ribuan baris data transaksi, proyek ini mengidentifikasi tren utama, perilaku pembelian pelanggan, dan peluang pertumbuhan pendapatan.',
+                    'tech_stack' => 'Microsoft Excel (Pivot Tables, Power Query, Advanced Formulas).',
+                    'system_db' => 'Data mentah berupa file Excel/CSV diolah secara lokal tanpa menggunakan database eksternal.',
+                    'links' => [
+                        ['type' => 'download', 'url' => '/downloads/Sales-Analysis-Order-Data.xlsx', 'text' => 'Download Data']
+                    ]
+                ],
+                [
+                    'title' => 'JogjaKarya UMKM E-commerce',
+                    'category' => 'Web Development',
+                    'image' => asset('JogjaKarya.png'),
+                    'color' => 'amber',
+                    'delay' => '0ms',
+                    'tags' => [
+                        ['name' => 'Laravel', 'color' => 'red'],
+                        ['name' => 'Tailwind', 'color' => 'cyan'],
+                        ['name' => 'MySQL', 'color' => 'yellow'],
+                    ],
+                    'desc_short' => 'Full-stack E-commerce platform khusus produk UMKM Yogyakarta. Memiliki sistem Admin Panel, manajemen pesanan, dan keranjang belanja dinamis bertema Sogan Batik.',
+                    'desc_full' => 'Sebuah platform E-commerce lengkap yang dirancang khusus untuk membantu UMKM di Yogyakarta memasarkan produk mereka. Menggunakan tema Sogan Batik yang khas, sistem ini dilengkapi fitur seperti keranjang belanja, checkout, dan Admin Panel untuk manajemen produk dan pesanan.',
+                    'tech_stack' => 'Laravel (PHP), Tailwind CSS, Alpine.js.',
+                    'system_db' => 'Arsitektur Monolithic MVC (Model-View-Controller). Database menggunakan MySQL relasional untuk menyimpan data user, produk, dan transaksi.',
+                    'links' => [
+                        ['type' => 'live', 'url' => 'http://web-jogjakarya-umkm.page.gd/public/', 'text' => 'Live App']
+                    ]
+                ],
+                [
+                    'title' => 'Global Economic & Human Development',
+                    'category' => 'Data Science',
+                    'image' => '/dasboard.png',
+                    'color' => 'sky',
+                    'delay' => '0ms',
+                    'tags' => [
+                        ['name' => 'Python', 'color' => 'blue'],
+                        ['name' => 'Excel / Tableau', 'color' => 'emerald'],
+                    ],
+                    'desc_short' => 'Comprehensive Excel dashboard analyzing global wealth and health disparities, highlighting the correlation between internet penetration, energy consumption, and life expectancy.',
+                    'desc_full' => 'Dashboard analitik komprehensif yang memvisualisasikan disparitas kekayaan dan kesehatan global. Analisis ini menyoroti korelasi antara penetrasi internet, konsumsi energi, dan angka harapan hidup di berbagai negara menggunakan data makroekonomi.',
+                    'tech_stack' => 'Python (Pandas untuk pembersihan data), Excel, Tableau untuk visualisasi akhir.',
+                    'system_db' => 'Dataset makroekonomi dari sumber publik yang diproses menjadi format terstruktur. Tidak menggunakan database realtime.',
+                    'links' => [
+                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/World-Economic-Dashboard', 'text' => 'View on GitHub']
+                    ]
+                ],
+                [
+                    'title' => 'BMLP Analytics Dashboard',
+                    'category' => 'Data Science',
+                    'image' => '/bmlp.png',
+                    'color' => 'red',
+                    'delay' => '100ms',
+                    'tags' => [
+                        ['name' => 'Streamlit', 'color' => 'red'],
+                        ['name' => 'Python', 'color' => 'blue'],
+                    ],
+                    'desc_short' => 'An interactive dashboard built with Streamlit to comprehensively visualize and analyze the BMLP dataset.',
+                    'desc_full' => 'Aplikasi dashboard interaktif yang dibangun dengan Streamlit untuk memvisualisasikan dan menganalisis dataset BMLP secara komprehensif. Memungkinkan pengguna mengeksplorasi data melalui berbagai filter dinamis dan grafik interaktif.',
+                    'tech_stack' => 'Python, Streamlit, Pandas, Plotly/Matplotlib.',
+                    'system_db' => 'Berjalan secara stateless di cloud menggunakan Streamlit Community Cloud. Menggunakan dataset CSV statis sebagai sumber data.',
+                    'links' => [
+                        ['type' => 'live', 'url' => 'https://bmlp-dashboard.streamlit.app/', 'text' => 'Open App']
+                    ]
+                ],
+                [
+                    'title' => 'Trending Topic Scraper',
+                    'category' => 'Automation',
+                    'image' => '/scraper.png',
+                    'color' => 'orange',
+                    'delay' => '200ms',
+                    'tags' => [
+                        ['name' => 'Web Scraping', 'color' => 'orange'],
+                        ['name' => 'Automation', 'color' => 'slate'],
+                    ],
+                    'desc_short' => 'A web scraping automation application using Python to extract and monitor trending topics in real-time.',
+                    'desc_full' => 'Aplikasi otomatisasi web scraping yang dikembangkan dengan Python untuk mengekstrak dan memantau topik yang sedang tren secara real-time dari berbagai platform media sosial dan berita.',
+                    'tech_stack' => 'Python, BeautifulSoup, Selenium, Pandas.',
+                    'system_db' => 'Data diekstrak secara dinamis dari DOM halaman web dan disimpan dalam format terstruktur (CSV/JSON) untuk keperluan analisis lanjutan.',
+                    'links' => [
+                        ['type' => 'live', 'url' => 'https://app-trending-scraper.streamlit.app/', 'text' => 'Open App']
+                    ]
+                ],
+                [
+                    'title' => 'BPS Statistics Dashboard',
+                    'category' => 'Web Development',
+                    'image' => '/sensus.png',
+                    'color' => 'cyan',
+                    'delay' => '300ms',
+                    'tags' => [
+                        ['name' => 'React.js', 'color' => 'cyan'],
+                        ['name' => 'Netlify', 'color' => 'teal'],
+                    ],
+                    'desc_short' => 'A modern web-based dashboard visualizing live statistical data and metrics from Statistics Indonesia (BPS).',
+                    'desc_full' => 'Dashboard berbasis web modern yang memvisualisasikan data statistik dan metrik kependudukan/ekonomi dari Badan Pusat Statistik (BPS) Indonesia dengan antarmuka yang responsif dan user-friendly.',
+                    'tech_stack' => 'React.js, Tailwind CSS, Recharts/Chart.js.',
+                    'system_db' => 'Aplikasi Single Page Application (SPA) yang dihosting di Netlify. Mengambil data dari public API BPS atau mock data JSON.',
+                    'links' => [
+                        ['type' => 'live', 'url' => 'https://bps-dashboard.netlify.app/', 'text' => 'Open App']
+                    ]
+                ],
+                [
+                    'title' => 'SPK Bantuan Sosial Desa',
+                    'category' => 'Web Development',
+                    'image' => '/SPK.PNG',
+                    'color' => 'emerald',
+                    'delay' => '400ms',
+                    'tags' => [
+                        ['name' => 'PHP Native', 'color' => 'indigo'],
+                        ['name' => 'MySQL', 'color' => 'sky'],
+                    ],
+                    'desc_short' => 'A Decision Support System (DSS) web app developed for Desa Lemahireng to determine social assistance eligibility based on multi-criteria algorithms.',
+                    'desc_full' => 'Sistem Pendukung Keputusan (SPK) berbasis web yang dikembangkan khusus untuk Pemerintah Desa Lemahireng. Sistem ini membantu menentukan kelayakan warga penerima bantuan sosial menggunakan algoritma multi-kriteria secara objektif dan transparan.',
+                    'tech_stack' => 'PHP Native, HTML/CSS/JS, Bootstrap.',
+                    'system_db' => 'Sistem monolitik klasik dengan koneksi langsung ke database MySQL (CRUD). Menyimpan data kependudukan dan kriteria penilaian.',
+                    'links' => [
+                        ['type' => 'live', 'url' => 'http://spk-bansos.freedev.app', 'text' => 'Live App']
+                    ]
+                ],
+                [
+                    'title' => 'ChrisFlix Premium Movies',
+                    'category' => 'Web Development',
+                    'image' => asset('chrisflix.png'),
+                    'color' => 'red',
+                    'delay' => '500ms',
+                    'tags' => [
+                        ['name' => 'HTML/CSS', 'color' => 'orange'],
+                        ['name' => 'Vanilla JS', 'color' => 'yellow'],
+                        ['name' => 'TMDB API', 'color' => 'green'],
+                    ],
+                    'desc_short' => 'A visually stunning, Netflix-inspired movie discovery web application. Integrating with the TMDB API to fetch trending movies.',
+                    'desc_full' => 'Aplikasi web pencarian film yang terinspirasi dari Netflix dengan visual memukau bergaya glassmorphism. Terintegrasi langsung dengan TMDB API untuk mengambil data film yang sedang tren, pencarian real-time, dan menampilkan metadata sinematik lengkap.',
+                    'tech_stack' => 'HTML5, CSS3, Vanilla JavaScript (ES6+), Fetch API.',
+                    'system_db' => 'Aplikasi Front-End murni. Tidak memiliki database sendiri; seluruh data (film, poster, rating) ditarik secara real-time dari REST API eksternal (The Movie Database).',
+                    'links' => [
+                        ['type' => 'live', 'url' => 'https://christeperferdiyanto571.github.io/movie-app-premium/', 'text' => 'Live App'],
+                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/movie-app-premium', 'text' => 'Source Code']
+                    ]
+                ],
+                [
+                    'title' => 'MSME Data Clustering Tool',
+                    'category' => 'Data Science',
+                    'image' => '/MSME.png',
+                    'color' => 'fuchsia',
+                    'delay' => '600ms',
+                    'tags' => [
+                        ['name' => 'Python (Pyodide)', 'color' => 'purple'],
+                        ['name' => 'Data Science', 'color' => 'pink'],
+                        ['name' => 'JavaScript', 'color' => 'yellow'],
+                    ],
+                    'desc_short' => 'An advanced data science web application running Python natively in the browser via WebAssembly (Pyodide) to process and cluster Excel datasets.',
+                    'desc_full' => 'Aplikasi web data science tingkat lanjut yang menjalankan kode Python secara native langsung di dalam browser menggunakan WebAssembly (Pyodide). Aplikasi ini dirancang untuk memproses dan mengelompokkan (clustering) dataset Excel UMKM menggunakan algoritma K-Means tanpa memerlukan server backend.',
+                    'tech_stack' => 'Python (Pyodide, Pandas, Scikit-learn), HTML/CSS, JavaScript.',
+                    'system_db' => 'Pemrosesan Client-Side sepenuhnya (WebAssembly). Data Excel yang diunggah pengguna diproses di dalam memori browser, menjamin privasi karena data tidak pernah dikirim ke server.',
+                    'links' => [
+                        ['type' => 'live', 'url' => 'https://christeperferdiyanto571.github.io/msme-clustering/', 'text' => 'Live App'],
+                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/msme-clustering', 'text' => 'Source Code']
+                    ]
+                ],
+                [
+                    'title' => 'Nature AI Classification',
+                    'category' => 'Data Science',
+                    'image' => asset('nature.png'),
+                    'color' => 'emerald',
+                    'delay' => '700ms',
+                    'tags' => [
+                        ['name' => 'TensorFlow', 'color' => 'orange'],
+                        ['name' => 'Python', 'color' => 'blue'],
+                        ['name' => 'Laravel', 'color' => 'rose'],
+                    ],
+                    'desc_short' => 'An Artificial Intelligence web app using TensorFlow to analyze and classify nature photography with real-time confidence scoring.',
+                    'desc_full' => 'Aplikasi web Kecerdasan Buatan (AI) yang menggunakan model Machine Learning TensorFlow untuk menganalisis dan mengklasifikasikan fotografi alam (seperti Gletser, Pegunungan, Lautan). Memberikan hasil prediksi klasifikasi secara instan dengan skor akurasi (confidence scoring) real-time.',
+                    'tech_stack' => 'Python (TensorFlow, Keras) untuk pemodelan, Flask/FastAPI untuk API, Laravel & Tailwind CSS untuk Frontend.',
+                    'system_db' => 'Sistem terdistribusi: Frontend berinteraksi dengan model Deep Learning yang dideploy sebagai REST API terpisah. Gambar diproses secara on-the-fly untuk inferensi.',
+                    'links' => [
+                        ['type' => 'live', 'url' => 'https://christeperferdiyanto571.github.io/nature-ai/', 'text' => 'Live App'],
+                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/nature-ai', 'text' => 'Source Code']
+                    ]
+                ],
+            ];
+        @endphp
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- Project 0 (Sales Analysis) -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-indigo-200/50 transition-all duration-300 gs-reveal-up">
-                <div class="h-56 overflow-hidden relative bg-slate-100">
-                    <img src="/sales.png" alt="Sales Analysis" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-indigo-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                        <a href="/downloads/Sales-Analysis-Order-Data.xlsx" download class="bg-white text-indigo-600 font-bold px-6 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 flex items-center gap-2">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                            Download Data
-                        </a>
+            @foreach($projects as $index => $project)
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-{{ $project['color'] }}-200/50 transition-all duration-300 gs-reveal-up cursor-pointer" 
+                 style="transition-delay: {{ $project['delay'] }};"
+                 onclick="openProjectModal({{ $index }})">
+                
+                <div class="h-56 overflow-hidden relative {{ (str_contains($project['image'], 'JogjaKarya.png') || str_contains($project['image'], 'chrisflix.png') || str_contains($project['image'], 'nature.png')) ? 'bg-slate-900 p-6 flex items-center justify-center' : 'bg-slate-100' }}">
+                    <img src="{!! $project['image'] !!}" alt="{{ $project['title'] }}" class="w-full h-full {{ (str_contains($project['image'], 'JogjaKarya.png') || str_contains($project['image'], 'chrisflix.png') || str_contains($project['image'], 'nature.png')) ? 'object-contain rounded-lg' : 'object-cover' }} transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-{{ $project['color'] }}-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col sm:flex-row items-center justify-center gap-3 backdrop-blur-[2px]">
+                        
+                        <button onclick="openProjectModal({{ $index }}); event.stopPropagation();" class="bg-white text-{{ $project['color'] }}-600 font-bold px-4 py-2 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-{{ $project['color'] }}-50 hover:scale-105 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            <span>Detail</span>
+                        </button>
+                        
+                        @foreach($project['links'] as $link)
+                            @if($link['type'] == 'github')
+                                <a href="{{ $link['url'] }}" target="_blank" onclick="event.stopPropagation();" class="bg-slate-900 text-white font-bold p-2 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-slate-800 hover:scale-110 flex items-center justify-center" title="{{ $link['text'] }}">
+                                    <i class="devicon-github-original text-lg"></i>
+                                </a>
+                            @elseif($link['type'] == 'download')
+                                <a href="{{ $link['url'] }}" download onclick="event.stopPropagation();" class="bg-indigo-600 text-white font-bold px-4 py-2 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-indigo-700 hover:scale-105 flex items-center gap-2" title="{{ $link['text'] }}">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    <span>Unduh</span>
+                                </a>
+                            @else
+                                <a href="{{ $link['url'] }}" target="_blank" onclick="event.stopPropagation();" class="bg-sky-600 text-white font-bold px-4 py-2 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-sky-700 hover:scale-105 flex items-center gap-2" title="{{ $link['text'] }}">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    <span>Live App</span>
+                                </a>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
-                <div class="p-8">
+                <div class="p-8 pointer-events-none">
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 text-xs font-bold bg-green-50 text-green-600 rounded-full border border-green-100">Excel</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-indigo-50 text-indigo-600 rounded-full border border-indigo-100">Data Analysis</span>
+                        @foreach($project['tags'] as $tag)
+                        <span class="px-3 py-1 text-xs font-bold bg-{{ $tag['color'] }}-50 text-{{ $tag['color'] }}-600 rounded-full border border-{{ $tag['color'] }}-100">{{ $tag['name'] }}</span>
+                        @endforeach
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">Sales & Order Data Analysis</h3>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-{{ $project['color'] }}-600 transition-colors">{{ $project['title'] }}</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Comprehensive analysis of sales order data to identify key trends, customer purchasing behaviors, and revenue growth opportunities.
+                        {{ $project['desc_short'] }}
                     </p>
                 </div>
             </div>
+            @endforeach
+        </div></div>
+    </div>
+</section>
 
+<!-- Project Modal -->
+<div id="projectModal" class="fixed inset-0 z-[100] hidden">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity opacity-0" id="modalBackdrop" onclick="closeProjectModal()"></div>
+    
+    <!-- Modal Content -->
+    <div class="absolute inset-4 md:inset-auto md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 bg-white rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden transform scale-95 opacity-0 transition-all duration-300 md:max-w-5xl md:w-full md:max-h-[90vh] z-10" id="modalContent">
+        
+        <!-- Close Button -->
+        <button onclick="closeProjectModal()" class="absolute top-4 right-4 z-20 w-10 h-10 bg-black/10 hover:bg-black/20 md:bg-slate-100 md:hover:bg-slate-200 rounded-full flex items-center justify-center transition-colors">
+            <svg class="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
 
-            <!-- Project 1 (JogjaKarya E-commerce) -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-amber-200/50 transition-all duration-300 gs-reveal-up">
-                <div class="h-56 overflow-hidden relative bg-slate-900 p-6 flex items-center justify-center">
-                    <img src="{{ asset('JogjaKarya.png') }}" alt="JogjaKarya E-commerce" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 rounded-lg">
-                    <div class="absolute inset-0 bg-amber-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                        <a href="http://web-jogjakarya-umkm.page.gd/public/" target="_blank" class="bg-white text-amber-600 font-bold px-6 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 flex items-center gap-2">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            Live App
-                        </a>
-                    </div>
+        <!-- Left Image Section -->
+        <div class="w-full md:w-2/5 h-64 md:h-auto relative bg-slate-100" id="modalImageContainer">
+            <img src="" id="modalImage" class="w-full h-full object-cover" alt="Project Image">
+        </div>
+
+        <!-- Right Content Section -->
+        <div class="w-full md:w-3/5 p-6 md:p-10 overflow-y-auto bg-white flex flex-col">
+            <div class="flex flex-wrap gap-2 mb-4" id="modalTags">
+                <!-- Tags will be injected here -->
+            </div>
+            
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-4" id="modalTitle">Project Title</h2>
+            
+            <p class="text-slate-600 leading-relaxed mb-6" id="modalDesc">
+                Project description goes here...
+            </p>
+
+            <div class="space-y-6 mb-8">
+                <!-- Tech Stack -->
+                <div>
+                    <h4 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Tech Stack / Bahasa</h4>
+                    <p class="text-slate-700 font-medium" id="modalTechStack">...</p>
                 </div>
-                <div class="p-8">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 text-xs font-bold bg-red-50 text-red-600 rounded-full border border-red-100">Laravel</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-cyan-50 text-cyan-600 rounded-full border border-cyan-100">Tailwind</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-yellow-50 text-yellow-600 rounded-full border border-yellow-100">MySQL</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">JogjaKarya UMKM E-commerce</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Full-stack E-commerce platform khusus produk UMKM Yogyakarta. Memiliki sistem Admin Panel, manajemen pesanan, dan keranjang belanja dinamis bertema Sogan Batik.
-                    </p>
+                
+                <!-- System & Database -->
+                <div>
+                    <h4 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Sistem & Database</h4>
+                    <p class="text-slate-700 font-medium" id="modalSystem">...</p>
                 </div>
             </div>
 
-            <!-- Project 2 (Excel Dashboard) -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-sky-200/50 transition-all duration-300 gs-reveal-up">
-                <div class="h-56 overflow-hidden relative bg-slate-100">
-                    <img src="/dasboard.png" alt="Dashboard Green Economy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-sky-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                        <a href="https://github.com/christeperferdiyanto571/World-Economic-Dashboard" target="_blank" class="bg-white text-sky-600 font-bold px-6 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 flex items-center gap-2">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View on GitHub
-                        </a>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 text-xs font-bold bg-blue-50 text-blue-600 rounded-full border border-blue-100">Python</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-emerald-50 text-emerald-600 rounded-full border border-emerald-100">Excel / Tableau</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-sky-600 transition-colors">Global Economic & Human Development</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Comprehensive Excel dashboard analyzing global wealth and health disparities, highlighting the correlation between internet penetration, energy consumption, and life expectancy.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Project 2 (BMLP) -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-red-200/50 transition-all duration-300 gs-reveal-up" style="transition-delay: 100ms;">
-                <div class="h-56 overflow-hidden relative bg-slate-100">
-                    <img src="/bmlp.png" alt="BMLP Dashboard" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-red-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                        <a href="https://bmlp-dashboard.streamlit.app/" target="_blank" class="bg-white text-red-500 font-bold px-6 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20">Open App</a>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 text-xs font-bold bg-red-50 text-red-600 rounded-full border border-red-100">Streamlit</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-blue-50 text-blue-600 rounded-full border border-blue-100">Python</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-red-500 transition-colors">BMLP Analytics Dashboard</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        An interactive dashboard built with Streamlit to comprehensively visualize and analyze the BMLP dataset.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Project 3 (Trending Scraper) -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-orange-200/50 transition-all duration-300 gs-reveal-up" style="transition-delay: 200ms;">
-                <div class="h-56 overflow-hidden relative bg-slate-100">
-                    <img src="/scraper.png" alt="Trending Scraper" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-orange-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                        <a href="https://app-trending-scraper.streamlit.app/" target="_blank" class="bg-white text-orange-500 font-bold px-6 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20">Open App</a>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 text-xs font-bold bg-orange-50 text-orange-600 rounded-full border border-orange-100">Web Scraping</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-slate-100 text-slate-600 rounded-full border border-slate-200">Automation</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-orange-500 transition-colors">Trending Topic Scraper</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        A web scraping automation application using Python to extract and monitor trending topics in real-time.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Project 4 (BPS Dashboard) -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-cyan-200/50 transition-all duration-300 gs-reveal-up" style="transition-delay: 300ms;">
-                <div class="h-56 overflow-hidden relative bg-slate-100">
-                    <img src="/sensus.png" alt="BPS Dashboard" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-cyan-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                        <a href="https://bps-dashboard.netlify.app/" target="_blank" class="bg-white text-cyan-500 font-bold px-6 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20">Open App</a>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 text-xs font-bold bg-cyan-50 text-cyan-600 rounded-full border border-cyan-100">React.js</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-teal-50 text-teal-600 rounded-full border border-teal-100">Netlify</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">BPS Statistics Dashboard</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        A modern web-based dashboard visualizing live statistical data and metrics from Statistics Indonesia (BPS).
-                    </p>
-                </div>
-            </div>
-
-            <!-- Project 5 (SPK Bantuan Sosial) -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-emerald-200/50 transition-all duration-300 gs-reveal-up" style="transition-delay: 400ms;">
-                <div class="h-56 overflow-hidden relative bg-slate-100">
-                    <img src="/SPK.PNG" alt="SPK Bantuan Sosial" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-emerald-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                        <a href="http://spk-bansos.freedev.app" target="_blank" rel="noopener noreferrer" class="bg-white text-emerald-600 font-bold px-6 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-emerald-50 hover:scale-105 flex items-center gap-2">
-                            <span>Live App</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 text-xs font-bold bg-indigo-50 text-indigo-600 rounded-full border border-indigo-100">PHP Native</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-sky-50 text-sky-600 rounded-full border border-sky-100">MySQL</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">SPK Bantuan Sosial Desa</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        A Decision Support System (DSS) web app developed for Desa Lemahireng to determine social assistance eligibility based on multi-criteria algorithms.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Project 7 (ChrisFlix Movie App) -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-red-200/50 transition-all duration-300 gs-reveal-up" style="transition-delay: 500ms;">
-                <div class="h-56 overflow-hidden relative bg-slate-900 flex items-center justify-center p-4">
-                    <img src="{{ asset('chrisflix.png') }}" alt="ChrisFlix Movie App" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 rounded-xl">
-                    <div class="absolute inset-0 bg-red-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 backdrop-blur-[2px]">
-                        <a href="https://christeperferdiyanto571.github.io/movie-app-premium/" target="_blank" rel="noopener noreferrer" class="bg-white text-red-600 font-bold px-5 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-red-50 hover:scale-105 flex items-center gap-2">
-                            <span>Live App</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                        </a>
-                        <a href="https://github.com/christeperferdiyanto571/movie-app-premium" target="_blank" rel="noopener noreferrer" class="bg-white text-red-600 p-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-red-50 hover:scale-110 flex items-center justify-center" title="View Source Code">
-                            <i class="fa-brands fa-github text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 text-xs font-bold bg-orange-50 text-orange-600 rounded-full border border-orange-100">HTML/CSS</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-yellow-50 text-yellow-600 rounded-full border border-yellow-100">Vanilla JS</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-green-50 text-green-600 rounded-full border border-green-100">TMDB API</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-red-600 transition-colors">ChrisFlix Premium Movies</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        A visually stunning, Netflix-inspired movie discovery web application. Integrating with the TMDB API to fetch trending movies, search functionality, and display cinematic metadata with high-end glassmorphism UI.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Project 7 (MSME Clustering Tool) -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-fuchsia-200/50 transition-all duration-300 gs-reveal-up" style="transition-delay: 600ms;">
-                <div class="h-56 overflow-hidden relative bg-slate-100">
-                    <img src="/MSME.png" alt="Data Clustering Tool" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-fuchsia-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 backdrop-blur-[2px]">
-                        <a href="https://christeperferdiyanto571.github.io/msme-clustering/" target="_blank" rel="noopener noreferrer" class="bg-white text-fuchsia-600 font-bold px-5 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-fuchsia-50 hover:scale-105 flex items-center gap-2">
-                            <span>Live App</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                        </a>
-                        <a href="https://github.com/christeperferdiyanto571/msme-clustering" target="_blank" rel="noopener noreferrer" class="bg-white text-fuchsia-600 p-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-fuchsia-50 hover:scale-110 flex items-center justify-center" title="View Source Code">
-                            <i class="fa-brands fa-github text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 text-xs font-bold bg-purple-50 text-purple-600 rounded-full border border-purple-100">Python (Pyodide)</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-pink-50 text-pink-600 rounded-full border border-pink-100">Data Science</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-yellow-50 text-yellow-600 rounded-full border border-yellow-100">JavaScript</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-fuchsia-600 transition-colors">MSME Data Clustering Tool</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        An advanced data science web application running Python natively in the browser via WebAssembly (Pyodide) to process and cluster Excel datasets using K-Means algorithms.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Project 8 (Nature AI) -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-emerald-200/50 transition-all duration-300 gs-reveal-up" style="transition-delay: 700ms;">
-                <div class="h-56 overflow-hidden relative bg-slate-900">
-                    <img src="{{ asset('nature.png') }}" alt="Nature AI Classification" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 rounded-xl bg-white/5">
-                    <div class="absolute inset-0 bg-emerald-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 backdrop-blur-[2px]">
-                        <a href="https://christeperferdiyanto571.github.io/nature-ai/" target="_blank" rel="noopener noreferrer" class="bg-white text-emerald-600 font-bold px-5 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-emerald-50 hover:scale-105 flex items-center gap-2">
-                            <span>Live App</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                        </a>
-                        <a href="https://github.com/christeperferdiyanto571/nature-ai" target="_blank" rel="noopener noreferrer" class="bg-white text-emerald-600 p-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-emerald-50 hover:scale-110 flex items-center justify-center" title="View Source Code">
-                            <i class="fa-brands fa-github text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 text-xs font-bold bg-orange-50 text-orange-600 rounded-full border border-orange-100">TensorFlow</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-blue-50 text-blue-600 rounded-full border border-blue-100">Python</span>
-                        <span class="px-3 py-1 text-xs font-bold bg-rose-50 text-rose-600 rounded-full border border-rose-100">Laravel</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">Nature AI Classification</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        An Artificial Intelligence web app using TensorFlow to analyze and classify nature photography (Glaciers, Mountains, Oceans) with real-time confidence scoring.
-                    </p>
-                </div>
+            <!-- Action Buttons -->
+            <div class="mt-auto flex flex-wrap gap-4 pt-6 border-t border-slate-100" id="modalLinks">
+                <!-- Links will be injected here -->
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- Contact Form Section -->
 <section id="contact" class="py-20 bg-white relative">
@@ -721,5 +776,74 @@
         perspective: 1000,
         scale: 1.05
     });
+const projectsData = @json($projects);
+
+    const modal = document.getElementById('projectModal');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalContent = document.getElementById('modalContent');
+
+    function openProjectModal(index) {
+        const project = projectsData[index];
+        if(!project) return;
+
+        // Populate Data
+        const imageEl = document.getElementById('modalImage');
+        imageEl.src = project.image;
+        if(project.image.includes('JogjaKarya.png') || project.image.includes('chrisflix.png') || project.image.includes('nature.png')) {
+            imageEl.className = 'w-full h-full object-contain p-6';
+            document.getElementById('modalImageContainer').className = 'w-full md:w-2/5 h-64 md:h-auto relative bg-slate-900 flex items-center justify-center';
+        } else {
+            imageEl.className = 'w-full h-full object-cover';
+            document.getElementById('modalImageContainer').className = 'w-full md:w-2/5 h-64 md:h-auto relative bg-slate-100';
+        }
+
+        document.getElementById('modalTitle').textContent = project.title;
+        document.getElementById('modalDesc').textContent = project.desc_full;
+        document.getElementById('modalTechStack').textContent = project.tech_stack;
+        document.getElementById('modalSystem').textContent = project.system_db;
+
+        // Tags
+        const tagsHtml = project.tags.map(tag => `<span class="px-3 py-1 text-xs font-bold bg-${tag.color}-50 text-${tag.color}-600 rounded-full border border-${tag.color}-100">${tag.name}</span>`).join('');
+        document.getElementById('modalTags').innerHTML = tagsHtml;
+
+        // Links
+        let linksHtml = '';
+        project.links.forEach(link => {
+            if(link.type === 'github') {
+                linksHtml += `<a href="${link.url}" target="_blank" class="px-6 py-2.5 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors flex items-center gap-2"><i class="devicon-github-original"></i> ${link.text}</a>`;
+            } else if (link.type === 'download') {
+                linksHtml += `<a href="${link.url}" download class="px-6 py-2.5 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition-colors flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg> ${link.text}</a>`;
+            } else {
+                linksHtml += `<a href="${link.url}" target="_blank" class="px-6 py-2.5 bg-sky-600 text-white font-bold rounded-xl hover:bg-sky-700 transition-colors flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg> ${link.text}</a>`;
+            }
+        });
+        document.getElementById('modalLinks').innerHTML = linksHtml;
+
+        // Show Modal
+        modal.classList.remove('hidden');
+        // Trigger reflow
+        void modal.offsetWidth;
+        
+        modalBackdrop.classList.remove('opacity-0');
+        modalBackdrop.classList.add('opacity-100');
+        
+        modalContent.classList.remove('scale-95', 'opacity-0');
+        modalContent.classList.add('scale-100', 'opacity-100');
+        
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+        modalBackdrop.classList.remove('opacity-100');
+        modalBackdrop.classList.add('opacity-0');
+        
+        modalContent.classList.remove('scale-100', 'opacity-100');
+        modalContent.classList.add('scale-95', 'opacity-0');
+        
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
 </script>
 @endsection
