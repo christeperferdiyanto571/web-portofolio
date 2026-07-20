@@ -394,6 +394,29 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+            <!-- Project 0 (Sales Analysis) -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-indigo-200/50 transition-all duration-300 gs-reveal-up">
+                <div class="h-56 overflow-hidden relative bg-slate-100">
+                    <img src="/sales.png" alt="Sales Analysis" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-indigo-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                        <a href="/downloads/Sales-Analysis-Order-Data.xlsx" download class="bg-white text-indigo-600 font-bold px-6 py-2.5 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            Download Data
+                        </a>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 text-xs font-bold bg-green-50 text-green-600 rounded-full border border-green-100">Excel</span>
+                        <span class="px-3 py-1 text-xs font-bold bg-indigo-50 text-indigo-600 rounded-full border border-indigo-100">Data Analysis</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">Sales & Order Data Analysis</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Comprehensive analysis of sales order data to identify key trends, customer purchasing behaviors, and revenue growth opportunities.
+                    </p>
+                </div>
+            </div>
+
 
             <!-- Project 1 (JogjaKarya E-commerce) -->
             <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 group transform hover:-translate-y-4 hover:shadow-amber-200/50 transition-all duration-300 gs-reveal-up">
