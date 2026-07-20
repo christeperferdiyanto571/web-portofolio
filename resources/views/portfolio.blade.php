@@ -56,7 +56,7 @@
                         <!-- Gradient Overlay Tipis pas dihover -->
                         <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/40 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         
-                        <img src="/chris-keren.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Chris+Teper&background=6366f1&color=fff&size=512'" alt="Chris Profil" class="w-full h-full object-cover transform transition-transform duration-700 ease-out">
+                        <img src="{{ asset('chris-keren.jpeg') }}" onerror="this.src='https://ui-avatars.com/api/?name=Chris+Teper&background=6366f1&color=fff&size=512'" alt="Chris Profil" class="w-full h-full object-cover transform transition-transform duration-700 ease-out">
                     </div>
                 </div>
             </div>
@@ -397,7 +397,7 @@
                 [
                     'title' => 'Sales & Order Data Analysis',
                     'category' => 'Data Analysis',
-                    'image' => '/sales.png',
+                    'image' => asset('sales.png'),
                     'color' => 'indigo',
                     'delay' => '0ms',
                     'tags' => [
@@ -409,7 +409,7 @@
                     'tech_stack' => 'Microsoft Excel (Pivot Tables, Power Query, Advanced Formulas).',
                     'system_db' => 'Data mentah berupa file Excel/CSV diolah secara lokal tanpa menggunakan database eksternal.',
                     'links' => [
-                        ['type' => 'download', 'url' => '/downloads/Sales-Analysis-Order-Data.xlsx', 'text' => 'Download Data']
+                        ['type' => 'download', 'url' => asset('downloads/Sales-Analysis-Order-Data.xlsx'), 'text' => 'Download Data']
                     ]
                 ],
                 [
@@ -434,7 +434,7 @@
                 [
                     'title' => 'Global Economic & Human Development',
                     'category' => 'Data Science',
-                    'image' => '/dasboard.png',
+                    'image' => asset('dasboard.png'),
                     'color' => 'sky',
                     'delay' => '0ms',
                     'tags' => [
@@ -452,7 +452,7 @@
                 [
                     'title' => 'BMLP Analytics Dashboard',
                     'category' => 'Data Science',
-                    'image' => '/bmlp.png',
+                    'image' => asset('bmlp.png'),
                     'color' => 'red',
                     'delay' => '100ms',
                     'tags' => [
@@ -470,7 +470,7 @@
                 [
                     'title' => 'Trending Topic Scraper',
                     'category' => 'Automation',
-                    'image' => '/scraper.png',
+                    'image' => asset('scraper.png'),
                     'color' => 'orange',
                     'delay' => '200ms',
                     'tags' => [
@@ -488,7 +488,7 @@
                 [
                     'title' => 'BPS Statistics Dashboard',
                     'category' => 'Web Development',
-                    'image' => '/sensus.png',
+                    'image' => asset('sensus.png'),
                     'color' => 'cyan',
                     'delay' => '300ms',
                     'tags' => [
@@ -506,7 +506,7 @@
                 [
                     'title' => 'SPK Bantuan Sosial Desa',
                     'category' => 'Web Development',
-                    'image' => '/SPK.PNG',
+                    'image' => asset('SPK.PNG'),
                     'color' => 'emerald',
                     'delay' => '400ms',
                     'tags' => [
@@ -544,7 +544,7 @@
                 [
                     'title' => 'MSME Data Clustering Tool',
                     'category' => 'Data Science',
-                    'image' => '/MSME.png',
+                    'image' => asset('MSME.png'),
                     'color' => 'fuchsia',
                     'delay' => '600ms',
                     'tags' => [
