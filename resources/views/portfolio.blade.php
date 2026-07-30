@@ -410,7 +410,8 @@
                     'tech_stack' => 'PHP 8.2 (OOP/PDO), SQLite & MySQL Zero-Config, Vanilla CSS (Tactical Sage Theme), Chart.js, Looker Studio Connector.',
                     'system_db' => 'Arsitektur Modular Web Server. Menggunakan database hybrid (SQLite ber-seeder otomatis dan skema MySQL ekosistem BUMN/Injourney) dengan pipeline ekspor XLS terstandar.',
                     'links' => [
-                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/arff-airport-telemetry-hub', 'text' => 'GitHub Repo']
+                        ['type' => 'live', 'url' => 'http://arff-telemetry-hub.infinityfreeapp.com/?i=1', 'text' => 'Live Demo'],
+                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/arff-airport-telemetry-hub', 'text' => 'Source Code']
                     ]
                 ],
                 [
