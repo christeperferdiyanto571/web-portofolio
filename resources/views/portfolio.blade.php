@@ -397,7 +397,7 @@
                 [
                     'title' => 'ARFF Airport Emergency Command & Telemetry Hub',
                     'category' => 'Aviation Tech & Web Dev',
-                    'image' => asset('arff.jpg'),
+                    'image' => asset('arff.png'),
                     'color' => 'amber',
                     'delay' => '0ms',
                     'tags' => [
