@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Chris Teper - Portfolio')</title>
+    <title>@yield('title', 'Chris Teper - Data Scientist & Web Developer Portfolio')</title>
     
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Chris Teper - Data Scientist & Web Developer Portfolio">
+    <meta name="description" content="Portofolio resmi Chris Teper Ferdiyanto. Menampilkan berbagai project menarik di bidang Data Science, Machine Learning, dan Web Development.">
+    <meta name="keywords" content="Chris Teper, Chris Teper Ferdiyanto, Data Scientist Indonesia, Web Developer, Portofolio Web, Machine Learning, Laravel, Python, React">
+    <meta name="author" content="Chris Teper Ferdiyanto">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chris Teper - Data Scientist & Web Developer Portfolio">
+    <meta property="og:description" content="Portofolio resmi Chris Teper Ferdiyanto. Menampilkan berbagai project menarik di bidang Data Science, Machine Learning, dan Web Development.">
+    <!-- Ganti URL_GAMBAR_KAMU dengan URL gambar thumbnail jika web sudah online -->
+    <meta property="og:image" content="{{ asset('sales.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Chris Teper - Data Scientist & Web Developer Portfolio">
+    <meta property="twitter:description" content="Portofolio resmi Chris Teper Ferdiyanto. Menampilkan berbagai project menarik di bidang Data Science, Machine Learning, dan Web Development.">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     

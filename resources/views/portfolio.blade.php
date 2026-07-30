@@ -395,6 +395,25 @@
         @php
             $projects = [
                 [
+                    'title' => 'ARFF Airport Emergency Command & Telemetry Hub',
+                    'category' => 'Aviation Tech & Web Dev',
+                    'image' => asset('arff.jpg'),
+                    'color' => 'amber',
+                    'delay' => '0ms',
+                    'tags' => [
+                        ['name' => 'PHP 8.2', 'color' => 'amber'],
+                        ['name' => 'SQLite / MySQL', 'color' => 'emerald'],
+                        ['name' => 'Looker Studio', 'color' => 'indigo'],
+                    ],
+                    'desc_short' => 'Sistem telemetri kesiapsiagaan armada damkar aviasi & analitik waktu respon Golden Time (<180 Detik) berstandar ICAO Annex 14.',
+                    'desc_full' => 'Platform pusat kendali operasi (Command Hub) dan e-Checklist untuk digitalisasi pemantauan armada pemadam aviasi (Rosenbauer Panther). Dibekali mesin analitik Chart.js untuk memvalidasi batas kritis Golden Time (<180 detik) sesuai standar internasional ICAO Annex 14, serta integrasi ekspor langsung ke Google Spreadsheet & Looker Studio untuk presentasi eksekutif GM Bandara.',
+                    'tech_stack' => 'PHP 8.2 (OOP/PDO), SQLite & MySQL Zero-Config, Vanilla CSS (Tactical Sage Theme), Chart.js, Looker Studio Connector.',
+                    'system_db' => 'Arsitektur Modular Web Server. Menggunakan database hybrid (SQLite ber-seeder otomatis dan skema MySQL ekosistem BUMN/Injourney) dengan pipeline ekspor XLS terstandar.',
+                    'links' => [
+                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/arff-airport-telemetry-hub', 'text' => 'GitHub Repo']
+                    ]
+                ],
+                [
                     'title' => 'Sales & Order Data Analysis',
                     'category' => 'Data Analysis',
                     'image' => asset('sales.png'),
