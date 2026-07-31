@@ -11,8 +11,18 @@ $html = view('portfolio')->render();
 $html = str_replace([
     'http://localhost/',
     'http://127.0.0.1/',
-    'http://::1/'
-], './public/', $html);
+    'http://::1/',
+    'http:\/\/localhost\/',
+    'http:\/\/127.0.0.1\/',
+    'http:\/\/::1\/'
+], [
+    './public/',
+    './public/',
+    './public/',
+    '.\/public\/',
+    '.\/public\/',
+    '.\/public\/'
+], $html);
 
 // Also handle any naked localhost without trailing slash if present
 $html = str_replace([
