@@ -630,8 +630,8 @@
                  style="transition-delay: {{ $project['delay'] }};"
                  onclick="openProjectModal({{ $index }})">
                 
-                <div class="h-56 overflow-hidden relative {{ (str_contains($project['image'], 'JogjaKarya.png') || str_contains($project['image'], 'chrisflix.png') || str_contains($project['image'], 'nature.png') || str_contains($project['image'], 'basarnas.png')) ? 'bg-slate-900 p-6 flex items-center justify-center' : 'bg-slate-100' }}">
-                    <img src="{!! $project['image'] !!}" alt="{{ $project['title'] }}" class="w-full h-full {{ (str_contains($project['image'], 'JogjaKarya.png') || str_contains($project['image'], 'chrisflix.png') || str_contains($project['image'], 'nature.png') || str_contains($project['image'], 'basarnas.png')) ? 'object-contain rounded-lg' : 'object-cover' }} transform group-hover:scale-105 transition-transform duration-500">
+                <div class="h-56 overflow-hidden relative bg-slate-900 p-4 flex items-center justify-center">
+                    <img src="{!! $project['image'] !!}" alt="{{ $project['title'] }}" class="w-full h-full object-contain rounded-lg transform group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute inset-0 bg-{{ $project['color'] }}-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col sm:flex-row items-center justify-center gap-3 backdrop-blur-[2px]">
                         
                         <button onclick="openProjectModal({{ $index }}); event.stopPropagation();" class="bg-white text-{{ $project['color'] }}-600 font-bold px-4 py-2 rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl shadow-black/20 hover:bg-{{ $project['color'] }}-50 hover:scale-105 flex items-center gap-2">
@@ -829,13 +829,8 @@ const projectsData = @json($projects);
         // Populate Data
         const imageEl = document.getElementById('modalImage');
         imageEl.src = project.image;
-        if(project.image.includes('JogjaKarya.png') || project.image.includes('chrisflix.png') || project.image.includes('nature.png') || project.image.includes('basarnas.png')) {
-            imageEl.className = 'w-full h-full object-contain p-6';
-            document.getElementById('modalImageContainer').className = 'w-full md:w-2/5 h-64 md:h-auto relative bg-slate-900 flex items-center justify-center';
-        } else {
-            imageEl.className = 'w-full h-full object-cover';
-            document.getElementById('modalImageContainer').className = 'w-full md:w-2/5 h-64 md:h-auto relative bg-slate-100';
-        }
+        imageEl.className = 'w-full h-full object-contain p-6';
+        document.getElementById('modalImageContainer').className = 'w-full md:w-2/5 h-64 md:h-auto relative bg-slate-900 flex items-center justify-center';
 
         document.getElementById('modalTitle').textContent = project.title;
         document.getElementById('modalDesc').textContent = project.desc_full;
