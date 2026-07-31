@@ -395,6 +395,26 @@
         @php
             $projects = [
                 [
+                    'title' => 'Portal TI Terpadu & Web-GIS Basarnas Cilacap',
+                    'category' => 'GovTech & GIS System (Magang TI)',
+                    'image' => asset('basarnas.png'),
+                    'color' => 'amber',
+                    'delay' => '0ms',
+                    'tags' => [
+                        ['name' => 'Web-GIS', 'color' => 'emerald'],
+                        ['name' => 'NMS & Helpdesk', 'color' => 'amber'],
+                        ['name' => 'Leaflet.js', 'color' => 'indigo'],
+                    ],
+                    'desc_short' => 'Sistem Informasi Terpadu Kantor SAR Kelas B Cilacap: Manajemen Aset QR, Helpdesk, Monitoring NMS, dan Peta Telemetri Operasi SAR.',
+                    'desc_full' => 'Aplikasi web modern (Single Page Application) hasil Inovasi Proyek Akhir Magang Bidang TI di Kantor Pencarian dan Pertolongan (BASARNAS) Kelas B Cilacap. Mengintegrasikan 7 modul pelayanan teknis profesional: Dashboard statistik real-time, E-Asset berlabel QR Code, Layanan Helpdesk & Ticketing, Simulator NMS (Network Management System) & Topologi Jaringan Cisco/MikroTik, Web-GIS pemetaan Pos SAR dan Kapal Patroli Laut KN SAR Setyaki 224, serta Buku Saku Digital SOP TI.',
+                    'tech_stack' => 'HTML5 Modular SPA, Vanilla JavaScript, Leaflet.js / OpenStreetMap, Chart.js, Web Audio API (Sistem Sirene Darurat), Executive Basarnas Orange Theme.',
+                    'system_db' => 'Arsitektur Client-Side Reactive Single Page Application (SPA) yang dirancang secara portable dengan sistem manajemen state memori dan ekspor dokumen formal PDF/Excel.',
+                    'links' => [
+                        ['type' => 'live', 'url' => 'https://christeperferdiyanto571.github.io/portal-ti-basarnas-cilacap/', 'text' => 'Live Demo'],
+                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/portal-ti-basarnas-cilacap', 'text' => 'Source Code']
+                    ]
+                ],
+                [
                     'title' => 'ARFF Airport Emergency Command & Telemetry Hub',
                     'category' => 'Aviation Tech & Web Dev',
                     'image' => asset('arff.png'),
