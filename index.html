@@ -141,7 +141,10 @@
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="#projects" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-sky-500 to-indigo-600 text-white font-bold hover:from-sky-400 hover:to-indigo-500 shadow-lg shadow-indigo-500/30 transition-all transform hover:-translate-y-1">View Projects</a>
-                    <a href="https://drive.google.com/drive/folders/1jDHvvCxNlffiIC0-Napk9JMO77F5cjl6?usp=sharing" target="_blank" class="px-8 py-3.5 rounded-full bg-white border border-slate-300 text-slate-700 font-bold hover:border-indigo-400 hover:text-indigo-600 shadow-sm transition-all">Download CV</a>
+                    <button onclick="openCvModal()" class="px-8 py-3.5 rounded-full bg-white border border-slate-300 text-slate-700 font-bold hover:border-indigo-400 hover:text-indigo-600 shadow-sm hover:shadow-md transition-all flex items-center gap-2 cursor-pointer">
+                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span>Lihat CV & Resume</span>
+                    </button>
                 </div>
             </div>
             
@@ -1870,7 +1873,7 @@
 </section>
 
 <!-- Project Modal -->
-<div id="projectModal" class="fixed inset-0 z-[100] hidden">
+<div id="projectModal" class="fixed inset-0 hidden" style="z-index: 999999 !important;">
     <!-- Backdrop -->
     <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity opacity-0" id="modalBackdrop" onclick="closeProjectModal()"></div>
     
@@ -1917,6 +1920,409 @@
             <div class="mt-auto flex flex-wrap gap-4 pt-6 border-t border-slate-100" id="modalLinks">
                 <!-- Links will be injected here -->
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Digital CV Modal -->
+<div id="cvModal" class="fixed inset-0 hidden overflow-y-auto" style="z-index: 999999 !important;">
+    <!-- Backdrop -->
+    <div class="fixed inset-0 bg-slate-900/80 backdrop-blur-md transition-opacity opacity-0" id="cvBackdrop" onclick="closeCvModal()"></div>
+    
+    <!-- Scrollable Flex Wrapper -->
+    <div class="relative min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-10" onclick="closeCvModal()">
+        <!-- CV Modal Content -->
+        <div onclick="event.stopPropagation()" class="bg-white rounded-3xl shadow-2xl transform scale-95 opacity-0 transition-all duration-300 max-w-5xl w-full z-10 border border-slate-200 p-6 sm:p-10 lg:p-12 text-slate-800 text-left my-auto relative" id="cvContent">
+        
+        <!-- Sticky Action Bar at Top -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b border-slate-200 mb-8 sticky -top-6 bg-white/95 backdrop-blur-sm z-20 gap-4 py-2">
+            <div>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full uppercase tracking-wider border border-indigo-200">Official Resume</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-1">CHRIS TEPER FERDIYANTO</h2>
+            </div>
+            <div class="flex items-center gap-3 self-end sm:self-auto">
+                <a href="https://drive.google.com/drive/folders/1jDHvvCxNlffiIC0-Napk9JMO77F5cjl6?usp=sharing" target="_blank" class="px-4 py-2 bg-indigo-600 text-white font-bold text-sm rounded-xl hover:bg-indigo-700 transition-all flex items-center gap-2 shadow-sm" title="Unduh arsip dari Google Drive jika dibutuhkan">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <span>Unduh Arsip (GDrive)</span>
+                </a>
+                <button onclick="closeCvModal()" class="w-10 h-10 bg-slate-100 hover:bg-rose-100 hover:text-rose-600 text-slate-700 rounded-full flex items-center justify-center transition-colors font-bold text-xl">
+                    &times;
+                </button>
+            </div>
+        </div>
+
+        <!-- Contact Badges -->
+        <div class="flex flex-wrap gap-2.5 mb-8 text-xs md:text-sm text-slate-600">
+            <span class="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-medium">Cilacap, Indonesia</span>
+            <span class="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-medium">(+62) 85878017489</span>
+            <span class="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-medium">christeperferdiyanto8362@gmail.com</span>
+            <a href="https://linkedin.com" target="_blank" class="flex items-center gap-1.5 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 px-3 py-1.5 rounded-lg border border-indigo-200 font-bold transition-colors">LinkedIn</a>
+            <a href="#projects" onclick="closeCvModal()" class="flex items-center gap-1.5 bg-sky-50 text-sky-700 hover:bg-sky-100 px-3 py-1.5 rounded-lg border border-sky-200 font-bold transition-colors">Portofolio</a>
+            <span class="flex items-center gap-1.5 bg-amber-50 text-amber-800 px-3 py-1.5 rounded-lg font-bold border border-amber-200">TOEFL Certified</span>
+            <span class="flex items-center gap-1.5 bg-emerald-50 text-emerald-800 px-3.5 py-1.5 rounded-lg font-extrabold border border-emerald-300">IPK: 3.86 / 4.00 (Cum Laude)</span>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 mb-10">
+            <h3 class="text-sm font-extrabold uppercase text-slate-500 tracking-wider mb-3">SUMMARY</h3>
+            <p class="text-slate-700 leading-relaxed text-sm md:text-base text-justify font-normal">
+                Bachelor's graduate in Informatics from Universitas Ahmad Dahlan with a strong interest in Information Technology, Data Analytics, Data Science, and Web Development. Experienced as an Informatics Laboratory Assistant, responsible for preparing practical materials, mentoring students, assessing practical work, troubleshooting software issues, and supporting computer laboratory management. Skilled in data processing, cleaning, validation, and visualization using Microsoft Excel, SQL, Python (Pandas), Power BI, and Tableau, as well as developing web applications using Laravel, React.js, PHP, HTML, CSS, JavaScript, and MySQL. Familiar with Windows, Linux, basic computer networking, and IT troubleshooting. A fast learner with strong analytical, problem-solving, communication, and teamwork skills, eager to contribute as an IT Support, Data Analyst, Data Scientist, System Administrator, or Web Developer.
+            </p>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="mb-10">
+            <h3 class="text-base md:text-lg font-extrabold text-slate-900 border-l-4 border-amber-500 pl-3.5 uppercase tracking-wider mb-4">EDUCATION</h3>
+            <div class="bg-gradient-to-r from-amber-50/50 via-slate-50 to-white p-6 rounded-2xl border border-amber-200/60 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h4 class="text-lg font-bold text-slate-900">UNIVERSITAS AHMAD DAHLAN - Yogyakarta, Indonesia</h4>
+                    <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Bachelor of Informatics <span class="text-amber-800 font-extrabold">(3.86/4.00, Cum Laude)</span>. <a href="transkrip-akademik-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-indigo-600 hover:text-indigo-800 underline font-bold cursor-pointer transition-colors" title="Buka Transkrip Asli (PDF)">[Transcript]</a></p>
+                </div>
+                <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(Sep 2022 – 2026)</span>
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <div class="mb-10">
+            <h3 class="text-base md:text-lg font-extrabold text-slate-900 border-l-4 border-indigo-600 pl-3.5 uppercase tracking-wider mb-6">PROFESSIONAL EXPERIENCE</h3>
+            
+            <!-- Exp 1 -->
+            <div class="border-l-2 border-indigo-500 pl-5 md:pl-6 pb-6 mb-6 border-b border-slate-100">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-2">
+                    <h4 class="text-base md:text-lg font-bold text-slate-900">Laboratory Assistant - Informatics Laboratory, UAD</h4>
+                    <span class="text-xs md:text-sm font-bold text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200 w-max">(Sep 2023 – Jun 2025)</span>
+                </div>
+                <p class="text-sm font-semibold text-indigo-600 mb-3">Yogyakarta, Indonesia</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm md:text-base text-slate-700 leading-relaxed">
+                    <li>Supported practicum operations across multiple subjects (Computer Systems, OOP, Statistics, OS, Software Analysis, Computer Graphics) for 2+ classes per course (40 students/class) by preparing materials, software, and session readiness, ensuring smooth and on-time execution.</li>
+                    <li>Delivered explanations of course materials and guided hands-on lab activities, assisting 80+ students per course in problem-solving and improving understanding as well as task completion rates.</li>
+                    <li>Designed assignments and practice questions, evaluated student work, and managed grading reports using structured data validation and simple ETL workflows, improving accuracy, consistency, and reporting efficiency.</li>
+                </ul>
+            </div>
+
+            <!-- Exp 2 -->
+            <div class="border-l-2 border-indigo-500 pl-5 md:pl-6 pb-2">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-1">
+                    <h4 class="text-base md:text-lg font-bold text-slate-900">MSIB – Startup Campus</h4>
+                    <span class="text-xs md:text-sm font-bold text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200 w-max">(Sep 2024 – Des 2024)</span>
+                </div>
+                <p class="text-sm font-bold text-sky-600 mb-1">Data Science</p>
+                <p class="text-xs text-slate-500 font-medium mb-3">Yogyakarta, Indonesia</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm md:text-base text-slate-700 leading-relaxed">
+                    <li>Completed end-to-end data analysis projects including data collection, preprocessing, exploratory data analysis (EDA), and visualization to generate actionable insights for decision-making.</li>
+                    <li>Performed data cleaning, feature engineering, and validation (handling missing values, duplicates, and outliers) using Python (pandas) and SQL, improving dataset quality and analysis reliability.</li>
+                    <li>Developed interactive KPI dashboards using Tableau to monitor performance metrics and effectively communicate insights to stakeholders.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ORGANIZATIONAL EXPERIENCE -->
+        <div class="mb-10">
+            <h3 class="text-base md:text-lg font-extrabold text-slate-900 border-l-4 border-emerald-600 pl-3.5 uppercase tracking-wider mb-6">ORGANIZATIONAL EXPERIENCE</h3>
+            
+            <!-- Org 1 -->
+            <div class="border-l-2 border-emerald-500 pl-5 md:pl-6 pb-6 mb-6 border-b border-slate-100">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-1">
+                    <h4 class="text-base font-bold text-slate-900">Panitia P2K (University Orientation Committee) Pusat UAD</h4>
+                    <span class="text-xs md:text-sm font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 w-max">(Sep 2024)</span>
+                </div>
+                <p class="text-sm font-bold text-emerald-600 mb-1">Companion & Content Creator</p>
+                <p class="text-xs text-slate-500 mb-3">Yogyakarta, Indonesia</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
+                    <li>Created and distributed informational content for new students, ensuring clear and consistent communication throughout the orientation program.</li>
+                    <li>Acted as a central facilitator by managing and distributing official information from the central committee to faculty-level mentors, ensuring alignment and accuracy of information delivery.</li>
+                    <li>Coordinated with cross-functional teams and faculty mentors to support smooth communication flow and effective execution of orientation activities.</li>
+                </ul>
+            </div>
+
+            <!-- Org 2 -->
+            <div class="border-l-2 border-emerald-500 pl-5 md:pl-6 pb-6 mb-6 border-b border-slate-100">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-1">
+                    <h4 class="text-base font-bold text-slate-900">Panitia P2K (University Orientation Committee) Fakultas - UAD</h4>
+                    <span class="text-xs md:text-sm font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 w-max">(Sep 2023)</span>
+                </div>
+                <p class="text-sm font-bold text-emerald-600 mb-1">Companion</p>
+                <p class="text-xs text-slate-500 mb-3">Yogyakarta, Indonesia</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
+                    <li>Mentored and assisted 10 assigned new students throughout the orientation program, ensuring their participation, understanding of activities, and smooth adaptation to the academic environment.</li>
+                    <li>Managed attendance tracking for approximately 22 students, ensuring accurate documentation and timely reporting during the event.</li>
+                    <li>Supported overall event operations by assisting coordination and on-site activities, contributing to the smooth execution of the orientation program.</li>
+                </ul>
+            </div>
+
+            <!-- Org 3 -->
+            <div class="border-l-2 border-emerald-500 pl-5 md:pl-6 pb-6 mb-6 border-b border-slate-100">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-1">
+                    <h4 class="text-base font-bold text-slate-900">Panitia Upgrading Ormawa - UAD</h4>
+                    <span class="text-xs md:text-sm font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200 w-max">(Apr 2024)</span>
+                </div>
+                <p class="text-sm font-bold text-amber-600 mb-1">Coordinator of Consumption Division</p>
+                <p class="text-xs text-slate-500 mb-3">Yogyakarta, Indonesia</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
+                    <li>Managed food logistics for 362 participants, ensuring timely preparation and distribution aligned with the event schedule.</li>
+                    <li>Coordinated with vendors and internal teams to handle procurement, delivery, and contingency needs, minimizing delays during the event.</li>
+                    <li>Led and organized the consumption team by assigning tasks and monitoring execution, ensuring smooth and efficient operations throughout the program.</li>
+                </ul>
+            </div>
+
+            <!-- Org 4 -->
+            <div class="border-l-2 border-emerald-500 pl-5 md:pl-6 pb-2">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-1">
+                    <h4 class="text-base font-bold text-slate-900">Panitia Paradox - UAD</h4>
+                    <span class="text-xs md:text-sm font-bold text-teal-700 bg-teal-50 px-3 py-1 rounded-full border border-teal-200 w-max">(Okt 2023)</span>
+                </div>
+                <p class="text-sm font-bold text-teal-600 mb-1">Companion</p>
+                <p class="text-xs text-slate-500 mb-3">Yogyakarta, Indonesia</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
+                    <li>Assisted participants during event sessions, ensuring smooth execution of activities and active engagement throughout the program.</li>
+                    <li>Prepared and checked materials and session requirements before activities, minimizing potential operational issues.</li>
+                    <li>Supported event coordination by communicating participant needs and assisting the committee in handling on-site activities effectively.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PROJECT -->
+        <div class="mb-10">
+            <h3 class="text-base md:text-lg font-extrabold text-slate-900 border-l-4 border-purple-600 pl-3.5 uppercase tracking-wider mb-6">PROJECT</h3>
+            
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Proj 1 -->
+                <div class="bg-slate-50/80 p-6 rounded-2xl border border-slate-200">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                        <div>
+                            <h4 class="text-base font-bold text-slate-900">Excel Data Analysis Project – Karirnex Bootcamp</h4>
+                            <p class="text-xs font-semibold text-purple-600">Yogyakarta, Indonesia</p>
+                        </div>
+                        <span class="text-xs font-bold bg-white px-3 py-1 rounded-lg border border-slate-200 w-max">(Okt 2025)</span>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-1.5 text-sm text-slate-700 mt-3">
+                        <li>Analyzed 2,000+ transaction data using Excel (Pivot Table, advanced formulas, and data processing)</li>
+                        <li>Built interactive dashboard using charts, slicers, and pivot charts</li>
+                        <li>Performed data cleaning, validation, and basic automation (VBA)</li>
+                    </ul>
+                </div>
+
+                <!-- Proj 2 -->
+                <div class="bg-slate-50/80 p-6 rounded-2xl border border-slate-200">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                        <div>
+                            <h4 class="text-base font-bold text-slate-900">Social Assistance Decision Support System (Web-Based)</h4>
+                            <p class="text-xs font-semibold text-sky-600">Yogyakarta, Indonesia</p>
+                        </div>
+                        <span class="text-xs font-bold bg-white px-3 py-1 rounded-lg border border-slate-200 w-max">(Jun 2026)</span>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-1.5 text-sm text-slate-700 mt-3">
+                        <li>Developed a web-based decision support system using PHP Native, MySQL, Bootstrap, HTML, CSS, and JavaScript.</li>
+                        <li>Built modules for citizen data management, assessment criteria, and eligibility evaluation.</li>
+                        <li>Designed CRUD features and integrated MySQL database for efficient data management.</li>
+                    </ul>
+                </div>
+
+                <!-- Proj 3 -->
+                <div class="bg-slate-50/80 p-6 rounded-2xl border border-slate-200">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                        <div>
+                            <h4 class="text-base font-bold text-slate-900">MSME Clustering Using K-Means and Firefly Algorithm (Thesis)</h4>
+                            <p class="text-xs font-semibold text-emerald-600">Yogyakarta, Indonesia</p>
+                        </div>
+                        <span class="text-xs font-bold bg-white px-3 py-1 rounded-lg border border-slate-200 w-max">(2025 - 2026)</span>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-1.5 text-sm text-slate-700 mt-3">
+                        <li>Developed a clustering model for MSMEs using K-Means with Firefly Algorithm for centroid initialization.</li>
+                        <li>Performed data preprocessing, clustering, and evaluation using Python.</li>
+                        <li>Analyzed clustering results to support MSME categorization and decision-making.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div>
+            <h3 class="text-base md:text-lg font-extrabold text-slate-900 border-l-4 border-indigo-600 pl-3.5 uppercase tracking-wider mb-6">SKILLS & COMPETENCIES</h3>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+                
+                <!-- Card 1: Technical Skill -->
+                <div class="bg-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-2xl border border-indigo-500/30 relative overflow-hidden group hover:border-indigo-500/60 transition-all duration-500 flex flex-col justify-between">
+                    <div class="absolute -top-16 -right-16 w-52 h-52 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none group-hover:bg-indigo-600/30 transition-all duration-500"></div>
+                    
+                    <div>
+                        <!-- Header -->
+                        <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-800/80">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30 text-2xl font-black shrink-0">
+                                📊
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-black text-indigo-400 uppercase tracking-widest block mb-0.5">Data & Analytics</span>
+                                <h4 class="text-lg font-extrabold text-white tracking-tight">Technical Skill</h4>
+                            </div>
+                        </div>
+
+                        <!-- Content Blocks -->
+                        <div class="space-y-3.5 text-sm">
+                            <!-- Excel -->
+                            <div class="bg-slate-800/70 rounded-2xl p-4 border border-slate-700/60 hover:bg-slate-800 transition-all">
+                                <div class="font-extrabold text-indigo-300 mb-1 flex items-center gap-2 text-xs md:text-sm">
+                                    <span class="w-2 h-2 rounded-full bg-indigo-400 shadow-sm shadow-indigo-400"></span> Excel
+                                </div>
+                                <p class="text-xs text-slate-300 leading-relaxed pl-4 font-normal">Pivot Table, XLOOKUP/VLOOKUP, IF, SUMIF/COUNTIF, basic dashboard</p>
+                            </div>
+
+                            <!-- SQL -->
+                            <div class="bg-slate-800/70 rounded-2xl p-4 border border-slate-700/60 hover:bg-slate-800 transition-all">
+                                <div class="font-extrabold text-purple-300 mb-1.5 flex items-center gap-2 text-xs md:text-sm">
+                                    <span class="w-2 h-2 rounded-full bg-purple-400 shadow-sm shadow-purple-400"></span> SQL
+                                </div>
+                                <ul class="list-disc pl-8 text-xs text-slate-300 space-y-1 font-normal">
+                                    <li>MySQL (query, join, aggregation), basic SQL Server</li>
+                                    <li>Database Design (Basic), ERD, CRUD Operations</li>
+                                </ul>
+                            </div>
+
+                            <!-- Python -->
+                            <div class="bg-slate-800/70 rounded-2xl p-4 border border-slate-700/60 hover:bg-slate-800 transition-all">
+                                <div class="font-extrabold text-pink-300 mb-1 flex items-center gap-2 text-xs md:text-sm">
+                                    <span class="w-2 h-2 rounded-full bg-pink-400 shadow-sm shadow-pink-400"></span> Python
+                                </div>
+                                <p class="text-xs text-slate-300 leading-relaxed pl-4 font-normal">pandas (data cleaning, preprocessing, visualization)</p>
+                            </div>
+
+                            <!-- Data Processing & BI -->
+                            <div class="bg-slate-800/70 rounded-2xl p-4 border border-slate-700/60 hover:bg-slate-800 transition-all space-y-2">
+                                <div>
+                                    <div class="font-extrabold text-sky-300 mb-0.5 flex items-center gap-2 text-xs">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Data Processing
+                                    </div>
+                                    <p class="text-xs text-slate-300 pl-3.5">data cleaning, data validation, ETL (extract–transform–load)</p>
+                                </div>
+                                <div>
+                                    <div class="font-extrabold text-teal-300 mb-0.5 flex items-center gap-2 text-xs">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span> Data Visualization
+                                    </div>
+                                    <p class="text-xs text-slate-300 pl-3.5">Excel, Tableau, Power BI (basic)</p>
+                                </div>
+                                <div>
+                                    <div class="font-extrabold text-amber-300 mb-0.5 flex items-center gap-2 text-xs">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Power BI
+                                    </div>
+                                    <p class="text-xs text-slate-300 pl-3.5">Dashboard Development, Data Modeling (Basic)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column Stack: IT, Web Dev, Soft Skills -->
+                <div class="space-y-7 flex flex-col justify-between">
+                    
+                    <!-- Card 2: IT & Programming -->
+                    <div class="bg-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-2xl border border-emerald-500/30 relative overflow-hidden group hover:border-emerald-500/60 transition-all duration-500">
+                        <div class="absolute -top-16 -right-16 w-52 h-52 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none group-hover:bg-emerald-600/30 transition-all duration-500"></div>
+                        
+                        <!-- Header -->
+                        <div class="flex items-center gap-4 mb-5 pb-3.5 border-b border-slate-800/80">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-lg shadow-emerald-500/30 text-2xl font-black shrink-0">
+                                💻
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-black text-emerald-400 uppercase tracking-widest block mb-0.5">Systems & Network</span>
+                                <h4 class="text-lg font-extrabold text-white tracking-tight">IT & Programming</h4>
+                            </div>
+                        </div>
+
+                        <!-- Content Blocks -->
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-slate-800/70 rounded-xl p-3.5 border border-slate-700/60 hover:bg-slate-800 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                <span class="font-extrabold text-emerald-300 text-xs md:text-sm flex items-center gap-2 min-w-[150px]"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> IT Fundamentals</span>
+                                <span class="text-xs text-slate-300 sm:text-right font-normal">hardware & software basics, installation, ICT support</span>
+                            </div>
+                            <div class="bg-slate-800/70 rounded-xl p-3.5 border border-slate-700/60 hover:bg-slate-800 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                <span class="font-extrabold text-teal-300 text-xs md:text-sm flex items-center gap-2 min-w-[150px]"><span class="w-2 h-2 rounded-full bg-teal-400"></span> Networking</span>
+                                <span class="text-xs text-slate-300 sm:text-right font-normal">LAN/Wi-Fi, TCP/IP, DNS, DHCP (basic)</span>
+                            </div>
+                            <div class="bg-slate-800/70 rounded-xl p-3.5 border border-slate-700/60 hover:bg-slate-800 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                <span class="font-extrabold text-green-300 text-xs md:text-sm flex items-center gap-2 min-w-[150px]"><span class="w-2 h-2 rounded-full bg-green-400"></span> Programming</span>
+                                <span class="text-xs text-slate-300 sm:text-right font-normal">HTML, CSS, JavaScript, PHP, C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Web Development -->
+                    <div class="bg-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-2xl border border-sky-500/30 relative overflow-hidden group hover:border-sky-500/60 transition-all duration-500">
+                        <div class="absolute -top-16 -right-16 w-52 h-52 bg-sky-600/20 rounded-full blur-3xl pointer-events-none group-hover:bg-sky-600/30 transition-all duration-500"></div>
+                        
+                        <!-- Header -->
+                        <div class="flex items-center gap-4 mb-5 pb-3.5 border-b border-slate-800/80">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-600 flex items-center justify-center text-white shadow-lg shadow-sky-500/30 text-2xl font-black shrink-0">
+                                🌐
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-black text-sky-400 uppercase tracking-widest block mb-0.5">Full Stack & Frameworks</span>
+                                <h4 class="text-lg font-extrabold text-white tracking-tight">Web Development</h4>
+                            </div>
+                        </div>
+
+                        <!-- Pills Grid -->
+                        <div class="flex flex-wrap gap-2.5 text-xs font-bold text-sky-200">
+                            <span class="px-3.5 py-2 bg-sky-950/80 text-sky-200 hover:bg-sky-500/20 hover:text-white border border-sky-500/30 rounded-xl transition-all flex items-center gap-2 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shadow-xs shadow-sky-400"></span> HTML5, CSS3, JavaScript (ES6+)</span>
+                            <span class="px-3.5 py-2 bg-sky-950/80 text-sky-200 hover:bg-sky-500/20 hover:text-white border border-sky-500/30 rounded-xl transition-all flex items-center gap-2 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-red-400 shadow-xs shadow-red-400"></span> Laravel</span>
+                            <span class="px-3.5 py-2 bg-sky-950/80 text-sky-200 hover:bg-sky-500/20 hover:text-white border border-sky-500/30 rounded-xl transition-all flex items-center gap-2 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-xs shadow-cyan-400"></span> React.js</span>
+                            <span class="px-3.5 py-2 bg-sky-950/80 text-sky-200 hover:bg-sky-500/20 hover:text-white border border-sky-500/30 rounded-xl transition-all flex items-center gap-2 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-green-400 shadow-xs shadow-green-400"></span> Node.js</span>
+                            <span class="px-3.5 py-2 bg-sky-950/80 text-sky-200 hover:bg-sky-500/20 hover:text-white border border-sky-500/30 rounded-xl transition-all flex items-center gap-2 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-purple-400 shadow-xs shadow-purple-400"></span> PHP</span>
+                            <span class="px-3.5 py-2 bg-sky-950/80 text-sky-200 hover:bg-sky-500/20 hover:text-white border border-sky-500/30 rounded-xl transition-all flex items-center gap-2 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Responsive Web Design</span>
+                            <span class="px-3.5 py-2 bg-sky-950/80 text-sky-200 hover:bg-sky-500/20 hover:text-white border border-sky-500/30 rounded-xl transition-all flex items-center gap-2 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> REST API (Basic)</span>
+                            <span class="px-3.5 py-2 bg-sky-950/80 text-sky-200 hover:bg-sky-500/20 hover:text-white border border-sky-500/30 rounded-xl transition-all flex items-center gap-2 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span> Figma (Basic)</span>
+                            <span class="px-3.5 py-2 bg-sky-950/80 text-sky-200 hover:bg-sky-500/20 hover:text-white border border-sky-500/30 rounded-xl transition-all flex items-center gap-2 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-400"></span> Git & GitHub</span>
+                            <span class="px-3.5 py-2 bg-sky-950/80 text-sky-200 hover:bg-sky-500/20 hover:text-white border border-sky-500/30 rounded-xl transition-all flex items-center gap-2 shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Version Control (Git)</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Soft Skills -->
+                    <div class="bg-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-2xl border border-amber-500/30 relative overflow-hidden group hover:border-amber-500/60 transition-all duration-500">
+                        <div class="absolute -top-16 -right-16 w-52 h-52 bg-amber-600/20 rounded-full blur-3xl pointer-events-none group-hover:bg-amber-600/30 transition-all duration-500"></div>
+                        
+                        <!-- Header -->
+                        <div class="flex items-center gap-4 mb-5 pb-3.5 border-b border-slate-800/80">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white shadow-lg shadow-amber-500/30 text-2xl font-black shrink-0">
+                                🔥
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-black text-amber-400 uppercase tracking-widest block mb-0.5">Professional Qualities</span>
+                                <h4 class="text-lg font-extrabold text-white tracking-tight">Soft Skills</h4>
+                            </div>
+                        </div>
+
+                        <!-- Soft Skills Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-bold text-amber-200">
+                            <div class="bg-amber-950/50 hover:bg-amber-900/50 p-3.5 rounded-xl border border-amber-500/30 flex items-center gap-2.5 transition-colors">
+                                <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0 shadow-sm shadow-amber-400"></span>
+                                <span>Problem Solving <span class="text-amber-300 font-normal block text-[11px]">(analytical thinking)</span></span>
+                            </div>
+                            <div class="bg-amber-950/50 hover:bg-amber-900/50 p-3.5 rounded-xl border border-amber-500/30 flex items-center gap-2.5 transition-colors">
+                                <span class="w-2 h-2 rounded-full bg-orange-400 shrink-0 shadow-sm shadow-orange-400"></span>
+                                <span>Communication & Interpersonal Skills</span>
+                            </div>
+                            <div class="bg-amber-950/50 hover:bg-amber-900/50 p-3.5 rounded-xl border border-amber-500/30 flex items-center gap-2.5 transition-colors">
+                                <span class="w-2 h-2 rounded-full bg-yellow-400 shrink-0 shadow-sm shadow-yellow-400"></span>
+                                <span>Teamwork & Collaboration</span>
+                            </div>
+                            <div class="bg-amber-950/50 hover:bg-amber-900/50 p-3.5 rounded-xl border border-amber-500/30 flex items-center gap-2.5 transition-colors">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0 shadow-sm shadow-emerald-400"></span>
+                                <span>Time Management & Discipline</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer inside CV Modal -->
+        <div class="mt-12 pt-6 border-t border-slate-200 text-center text-xs text-slate-500 font-medium">
+            &copy; 2026 Chris Teper Ferdiyanto
+        </div>
+
         </div>
     </div>
 </div>
@@ -2049,6 +2455,7 @@ const projectsData = [{"title":"Portal TI Terpadu \u0026 Web-GIS Basarnas Cilaca
         document.getElementById('modalLinks').innerHTML = linksHtml;
 
         // Show Modal
+        document.body.appendChild(modal);
         modal.classList.remove('hidden');
         // Trigger reflow
         void modal.offsetWidth;
@@ -2071,6 +2478,35 @@ const projectsData = [{"title":"Portal TI Terpadu \u0026 Web-GIS Basarnas Cilaca
         
         setTimeout(() => {
             modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+
+    // Digital CV Modal Controls
+    const cvModal = document.getElementById('cvModal');
+    const cvBackdrop = document.getElementById('cvBackdrop');
+    const cvContent = document.getElementById('cvContent');
+
+    function openCvModal() {
+        document.body.appendChild(cvModal);
+        cvModal.classList.remove('hidden');
+        cvModal.scrollTop = 0;
+        setTimeout(() => {
+            cvBackdrop.classList.remove('opacity-0');
+            cvBackdrop.classList.add('opacity-100');
+            cvContent.classList.remove('scale-95', 'opacity-0');
+            cvContent.classList.add('scale-100', 'opacity-100');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCvModal() {
+        cvBackdrop.classList.remove('opacity-100');
+        cvBackdrop.classList.add('opacity-0');
+        cvContent.classList.remove('scale-100', 'opacity-100');
+        cvContent.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => {
+            cvModal.classList.add('hidden');
             document.body.style.overflow = 'auto';
         }, 300);
     }
