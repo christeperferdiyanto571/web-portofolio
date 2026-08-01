@@ -764,7 +764,7 @@
             <span class="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-medium">christeperferdiyanto8362@gmail.com</span>
             <a href="https://linkedin.com" target="_blank" class="flex items-center gap-1.5 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 px-3 py-1.5 rounded-lg border border-indigo-200 font-bold transition-colors">LinkedIn</a>
             <a href="#projects" onclick="closeCvModal()" class="flex items-center gap-1.5 bg-sky-50 text-sky-700 hover:bg-sky-100 px-3 py-1.5 rounded-lg border border-sky-200 font-bold transition-colors">Portofolio</a>
-            <span class="flex items-center gap-1.5 bg-amber-50 text-amber-800 px-3 py-1.5 rounded-lg font-bold border border-amber-200">TOEFL Certified</span>
+            <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="flex items-center gap-1.5 bg-amber-50 text-amber-900 hover:bg-amber-100 px-3.5 py-1.5 rounded-lg font-extrabold border border-amber-300 transition-colors shadow-2xs" title="Buka Dokumen PDF Sertifikat TOEFL">TOEFL Certified (Score: 503) <span class="text-indigo-600 font-black underline ml-0.5">[PDF]</span></a>
             <span class="flex items-center gap-1.5 bg-emerald-50 text-emerald-800 px-3.5 py-1.5 rounded-lg font-extrabold border border-emerald-300">IPK: 3.86 / 4.00 (Cum Laude)</span>
         </div>
 
@@ -785,6 +785,25 @@
                     <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Bachelor of Informatics <span class="text-amber-800 font-extrabold">(3.86/4.00, Cum Laude)</span>. <a href="transkrip-akademik-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-indigo-600 hover:text-indigo-800 underline font-bold cursor-pointer transition-colors" title="Buka Transkrip Asli (PDF)">[Transcript]</a></p>
                 </div>
                 <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(Sep 2022 – 2026)</span>
+            </div>
+        </div>
+
+        <!-- CERTIFICATIONS & LANGUAGE -->
+        <div class="mb-10">
+            <h3 class="text-base md:text-lg font-extrabold text-slate-900 border-l-4 border-emerald-500 pl-3.5 uppercase tracking-wider mb-4">CERTIFICATIONS & LANGUAGE</h3>
+            <div class="bg-gradient-to-r from-emerald-50/40 via-slate-50 to-white p-6 rounded-2xl border border-emerald-200/60 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h4 class="text-lg font-bold text-slate-900">AHMAD DAHLAN LANGUAGE CENTER (ADLC) - Universitas Ahmad Dahlan</h4>
+                    <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Ahmad Dahlan English Proficiency Test (ADEPT / TOEFL Equivalent) <span class="text-emerald-800 font-extrabold">— Score: 503</span>. <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-indigo-600 hover:text-indigo-800 underline font-bold cursor-pointer transition-colors" title="Buka Sertifikat TOEFL Asli (PDF)">[Certificate]</a></p>
+                    <div class="flex flex-wrap items-center gap-2.5 mt-2 text-xs md:text-sm font-bold text-slate-600">
+                        <span>🎧 Listening: <span class="text-slate-900 font-black">70</span></span>
+                        <span class="text-slate-300">•</span>
+                        <span>✍️ Structure & Written: <span class="text-slate-900 font-black">72</span></span>
+                        <span class="text-slate-300">•</span>
+                        <span>📖 Reading: <span class="text-slate-900 font-black">61</span></span>
+                    </div>
+                </div>
+                <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(May 2025 – 2026)</span>
             </div>
         </div>
 
