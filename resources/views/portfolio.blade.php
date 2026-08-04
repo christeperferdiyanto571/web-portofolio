@@ -414,6 +414,7 @@
                     'system_db' => 'Sinkronisasi MySQL 2 arah dengan fallback buffer offline dalam browser memory untuk ketahanan pelayanan medis 24/7 tanpa henti.',
                     'links' => [
                         ['type' => 'live', 'url' => 'https://magical-peony-6a6f9c.netlify.app/', 'text' => 'Live Demo'],
+                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/sistem-informasi-rumah-sakit', 'text' => 'Source Code']
                     ]
                 ],
                 [
