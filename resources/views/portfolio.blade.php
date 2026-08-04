@@ -398,7 +398,26 @@
         @php
             $projects = [
                 [
-                    'title' => 'Portal TI Terpadu & Web-GIS Basarnas Cilacap',
+                    'title' => 'Sistem Informasi Rumah Sakit (RS)',
+                    'category' => 'Healthcare Tech & SIMRS Pro',
+                    'image' => asset('RS.png'),
+                    'color' => 'amber',
+                    'delay' => '0ms',
+                    'tags' => [
+                        ['name' => 'JavaScript Pro', 'color' => 'amber'],
+                        ['name' => 'MySQL Enterprise', 'color' => 'emerald'],
+                        ['name' => 'CSS3 Modern', 'color' => 'indigo'],
+                    ],
+                    'desc_short' => 'Platform SIMRS Terpadu untuk manajemen antrean pendaftaran, triase IGD klinis, anjungan LIS laboratorium, dan logistik gudang farmasi.',
+                    'desc_full' => 'Aplikasi Sistem Informasi Rumah Sakit (SIMRS) berkecepatan tinggi dengan arsitektur Hybrid Gateway. Mengintegrasikan loket generator nomor antrean (Golongan Lansia A, Umum B, Balita C), pemeriksaan skrining triase IGD, ruang kerja dokter & RME, sistem billing kasir, anjungan LIS laboratorium medik, hingga gudang stok depo obat dengan sistem closed-loop inventory berpenurunan otomatis terhubung database MySQL.',
+                    'tech_stack' => 'JavaScript ES6 Reactive Engine, MySQL V5.0 Enterprise Schema, XAMPP/PHP Sync Architecture, Custom Modal UI, Vanilla CSS3 Glassmorphism & High Contrast Dark Mode.',
+                    'system_db' => 'Sinkronisasi MySQL 2 arah dengan fallback buffer offline dalam browser memory untuk ketahanan pelayanan medis 24/7 tanpa henti.',
+                    'links' => [
+                        ['type' => 'live', 'url' => 'https://magical-peony-6a6f9c.netlify.app/', 'text' => 'Live Demo'],
+                    ]
+                ],
+                [
+                    'title' => 'Portal TI Terpadu & Web-GIS Basarnas',
                     'category' => 'GovTech & GIS System (Magang TI)',
                     'image' => asset('basarnas.png'),
                     'color' => 'amber',
@@ -408,8 +427,8 @@
                         ['name' => 'NMS & Helpdesk', 'color' => 'amber'],
                         ['name' => 'Leaflet.js', 'color' => 'indigo'],
                     ],
-                    'desc_short' => 'Sistem Informasi Terpadu Kantor SAR Kelas B Cilacap: Manajemen Aset QR, Helpdesk, Monitoring NMS, dan Peta Telemetri Operasi SAR.',
-                    'desc_full' => 'Aplikasi web modern (Single Page Application) hasil Inovasi Proyek Akhir Magang Bidang TI di Kantor Pencarian dan Pertolongan (BASARNAS) Kelas B Cilacap. Mengintegrasikan 7 modul pelayanan teknis profesional: Dashboard statistik real-time, E-Asset berlabel QR Code, Layanan Helpdesk & Ticketing, Simulator NMS (Network Management System) & Topologi Jaringan Cisco/MikroTik, Web-GIS pemetaan Pos SAR dan Kapal Patroli Laut KN SAR Setyaki 224, serta Buku Saku Digital SOP TI.',
+                    'desc_short' => 'Sistem Informasi Terpadu Kantor SAR: Manajemen Aset QR, Helpdesk, Monitoring NMS, dan Peta Telemetri Operasi SAR.',
+                    'desc_full' => 'Aplikasi web modern (Single Page Application) hasil Inovasi Proyek Akhir Magang Bidang TI di Kantor Pencarian dan Pertolongan (BASARNAS). Mengintegrasikan 7 modul pelayanan teknis profesional: Dashboard statistik real-time, E-Asset berlabel QR Code, Layanan Helpdesk & Ticketing, Simulator NMS (Network Management System) & Topologi Jaringan Cisco/MikroTik, Web-GIS pemetaan Pos SAR dan Kapal Patroli Laut KN SAR Setyaki 224, serta Buku Saku Digital SOP TI.',
                     'tech_stack' => 'HTML5 Modular SPA, Vanilla JavaScript, Leaflet.js / OpenStreetMap, Chart.js, Web Audio API (Sistem Sirene Darurat), Executive Basarnas Orange Theme.',
                     'system_db' => 'Arsitektur Client-Side Reactive Single Page Application (SPA) yang dirancang secara portable dengan sistem manajemen state memori dan ekspor dokumen formal PDF/Excel.',
                     'links' => [
