@@ -20,15 +20,15 @@
 <!-- Hero Section -->
 <section id="home" class="min-h-screen flex items-center pt-20 relative overflow-hidden bg-slate-50">
     <!-- Colorful Background Blurs -->
-    <div class="absolute top-20 left-10 w-72 h-72 bg-purple-300/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-    <div class="absolute top-40 right-20 w-72 h-72 bg-sky-300/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-    <div class="absolute -bottom-8 left-40 w-72 h-72 bg-sky-300/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-brand-yellow/70 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+    <div class="absolute top-40 right-20 w-72 h-72 bg-brand-blue/70 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-8 left-40 w-72 h-72 bg-brand-blue/70 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
 
     <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10">
         <div class="flex flex-col-reverse md:flex-row items-center gap-12">
             <!-- Kiri: Teks -->
             <div class="w-full md:w-1/2 gs-reveal-up mt-12 md:mt-0">
-                <p class="inline-block px-4 py-1.5 rounded-full bg-sky-100 text-sky-600 font-bold tracking-wider uppercase mb-5 text-xs shadow-sm">
+                <p class="inline-block px-4 py-1.5 rounded-full bg-brand-blue text-sky-600 font-bold tracking-wider uppercase mb-5 text-xs shadow-sm">
                     ✨ Welcome to my portfolio
                 </p>
                 <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">
@@ -43,7 +43,7 @@
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="#projects" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-sky-500 to-sky-600 text-white font-bold hover:from-sky-400 hover:to-sky-500 shadow-lg shadow-sky-500/30 transition-all transform hover:-translate-y-1">View Projects</a>
-                    <button onclick="openCvModal()" class="px-8 py-3.5 rounded-full bg-white border border-slate-300 text-slate-700 font-bold hover:border-sky-400 hover:text-sky-600 shadow-sm hover:shadow-md transition-all flex items-center gap-2 cursor-pointer">
+                    <button onclick="openCvModal()" class="px-8 py-3.5 rounded-full bg-brand-yellow/30 border border-brand-yellow/50 text-slate-700 font-bold hover:border-sky-400 hover:text-sky-600 shadow-sm hover:shadow-md transition-all flex items-center gap-2 cursor-pointer">
                         <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         <span>Lihat CV & Resume</span>
                     </button>
@@ -70,7 +70,7 @@
 <!-- About Section (Bento Grid) -->
 <section id="about" class="py-24 bg-slate-50 relative overflow-hidden">
     <!-- Dekorasi -->
-    <div class="absolute left-0 top-0 w-[500px] h-[500px] bg-gradient-to-br from-sky-100/40 to-transparent rounded-full blur-3xl -z-10"></div>
+    <div class="absolute left-0 top-0 w-[500px] h-[500px] bg-gradient-to-br from-brand-blue/60 to-transparent rounded-full blur-3xl -z-10"></div>
     
     <div class="max-w-6xl mx-auto px-6 relative z-10">
         <div class="text-center mb-16 gs-reveal-up">
@@ -316,8 +316,8 @@
 <!-- Experience Section -->
 <section id="experience" class="py-32 bg-slate-50 relative overflow-hidden">
     <!-- Dekorasi Background -->
-    <div class="absolute right-0 top-1/4 w-96 h-96 bg-sky-100/60 rounded-full blur-3xl -z-10"></div>
-    <div class="absolute left-0 bottom-1/4 w-96 h-96 bg-sky-100/60 rounded-full blur-3xl -z-10"></div>
+    <div class="absolute right-0 top-1/4 w-96 h-96 bg-brand-blue/60 rounded-full blur-3xl -z-10"></div>
+    <div class="absolute left-0 bottom-1/4 w-96 h-96 bg-brand-blue/60 rounded-full blur-3xl -z-10"></div>
     
     <div class="max-w-6xl mx-auto px-6">
         <div class="w-full text-center mb-24 gs-reveal-up">
@@ -338,7 +338,7 @@
                 
                 <!-- Content Left (Info) -->
                 <div class="w-full md:w-[45%] pl-[80px] md:pl-0 md:pr-12 text-left md:text-right mb-4 md:mb-0 relative z-10">
-                    <span class="inline-block px-4 py-1.5 bg-sky-100 text-sky-700 font-bold text-xs rounded-full mb-3 uppercase tracking-widest shadow-sm">Data Science</span>
+                    <span class="inline-block px-4 py-1.5 bg-brand-blue text-sky-700 font-bold text-xs rounded-full mb-3 uppercase tracking-widest shadow-sm">Data Science</span>
                     <h3 class="text-2xl font-bold text-slate-900 mb-1">Data Science Mentee</h3>
                     <h4 class="text-slate-500 font-semibold mb-2">Startup Campus (MSIB)</h4>
                 </div>
@@ -365,7 +365,7 @@
                 
                 <!-- Content Left (Info - visually on right) -->
                 <div class="w-full md:w-[45%] pl-[80px] md:pl-0 md:pl-12 text-left mb-4 md:mb-0 relative z-10">
-                    <span class="inline-block px-4 py-1.5 bg-sky-100 text-sky-700 font-bold text-xs rounded-full mb-3 uppercase tracking-widest shadow-sm">Education & Tech</span>
+                    <span class="inline-block px-4 py-1.5 bg-brand-blue text-sky-700 font-bold text-xs rounded-full mb-3 uppercase tracking-widest shadow-sm">Education & Tech</span>
                     <h3 class="text-2xl font-bold text-slate-900 mb-1">Laboratory Assistant</h3>
                     <h4 class="text-slate-500 font-semibold mb-2">Informatics, UAD</h4>
                 </div>
@@ -763,7 +763,7 @@
         <!-- Sticky Action Bar at Top -->
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b border-slate-200 mb-8 sticky -top-6 bg-white/95 backdrop-blur-sm z-20 gap-4 py-2">
             <div>
-                <span class="px-3 py-1 bg-sky-100 text-sky-700 text-xs font-bold rounded-full uppercase tracking-wider border border-sky-200">Official Resume</span>
+                <span class="px-3 py-1 bg-brand-blue text-sky-700 text-xs font-bold rounded-full uppercase tracking-wider border border-sky-200">Official Resume</span>
                 <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-1">CHRIS TEPER FERDIYANTO</h2>
             </div>
             <div class="flex items-center gap-3 self-end sm:self-auto">
@@ -782,8 +782,8 @@
             <span class="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-medium">Cilacap, Indonesia</span>
             <span class="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-medium">(+62) 85878017489</span>
             <span class="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-medium">christeperferdiyanto8362@gmail.com</span>
-            <a href="https://linkedin.com" target="_blank" class="flex items-center gap-1.5 bg-sky-50 text-sky-700 hover:bg-sky-100 px-3 py-1.5 rounded-lg border border-sky-200 font-bold transition-colors">LinkedIn</a>
-            <a href="#projects" onclick="closeCvModal()" class="flex items-center gap-1.5 bg-sky-50 text-sky-700 hover:bg-sky-100 px-3 py-1.5 rounded-lg border border-sky-200 font-bold transition-colors">Portofolio</a>
+            <a href="https://linkedin.com" target="_blank" class="flex items-center gap-1.5 bg-sky-50 text-sky-700 hover:bg-brand-blue px-3 py-1.5 rounded-lg border border-sky-200 font-bold transition-colors">LinkedIn</a>
+            <a href="#projects" onclick="closeCvModal()" class="flex items-center gap-1.5 bg-sky-50 text-sky-700 hover:bg-brand-blue px-3 py-1.5 rounded-lg border border-sky-200 font-bold transition-colors">Portofolio</a>
             <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="flex items-center gap-1.5 bg-amber-50 text-amber-900 hover:bg-amber-100 px-3.5 py-1.5 rounded-lg font-extrabold border border-amber-300 transition-colors shadow-2xs" title="Buka Dokumen PDF Sertifikat TOEFL">TOEFL Certified (Score: 503) <span class="text-sky-600 font-black underline ml-0.5">[PDF]</span></a>
             <span class="flex items-center gap-1.5 bg-emerald-50 text-emerald-800 px-3.5 py-1.5 rounded-lg font-extrabold border border-emerald-300">IPK: 3.86 / 4.00 (Cum Laude)</span>
         </div>
