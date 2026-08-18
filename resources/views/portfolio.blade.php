@@ -5,14 +5,14 @@
 <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-xl border-b border-slate-200 transition-all duration-300 py-4">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
         <a href="#" class="text-2xl font-extrabold tracking-tighter text-slate-900">
-            CHRIS<span class="bg-gradient-to-r from-sky-400 to-sky-500 bg-clip-text text-transparent">.</span>
+            CHRIS<span class="bg-gradient-to-r from-brand-blue to-brand-yellow bg-clip-text text-transparent">.</span>
         </a>
         <div class="hidden md:flex space-x-8">
-            <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-sky-500 transition-colors">About</a>
-            <a href="#skills" class="text-sm font-semibold text-slate-600 hover:text-sky-500 transition-colors">Skills</a>
-            <a href="#experience" class="text-sm font-semibold text-slate-600 hover:text-sky-500 transition-colors">Experience</a>
-            <a href="#projects" class="text-sm font-semibold text-slate-600 hover:text-sky-500 transition-colors">Projects</a>
-            <a href="#contact" class="text-sm font-semibold text-slate-600 hover:text-sky-500 transition-colors">Contact</a>
+            <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-slate-800 bg-brand-blue px-2 py-1 rounded-lg transition-colors">About</a>
+            <a href="#skills" class="text-sm font-semibold text-slate-600 hover:text-slate-800 bg-brand-blue px-2 py-1 rounded-lg transition-colors">Skills</a>
+            <a href="#experience" class="text-sm font-semibold text-slate-600 hover:text-slate-800 bg-brand-blue px-2 py-1 rounded-lg transition-colors">Experience</a>
+            <a href="#projects" class="text-sm font-semibold text-slate-600 hover:text-slate-800 bg-brand-blue px-2 py-1 rounded-lg transition-colors">Projects</a>
+            <a href="#contact" class="text-sm font-semibold text-slate-600 hover:text-slate-800 bg-brand-blue px-2 py-1 rounded-lg transition-colors">Contact</a>
         </div>
     </div>
 </nav>
@@ -28,23 +28,23 @@
         <div class="flex flex-col-reverse md:flex-row items-center gap-12">
             <!-- Kiri: Teks -->
             <div class="w-full md:w-1/2 gs-reveal-up mt-12 md:mt-0">
-                <p class="inline-block px-4 py-1.5 rounded-full bg-brand-blue text-sky-600 font-bold tracking-wider uppercase mb-5 text-xs shadow-sm">
+                <p class="inline-block px-4 py-1.5 rounded-full bg-brand-blue text-slate-900 bg-brand-yellow px-1 rounded font-bold tracking-wider uppercase mb-5 text-xs shadow-sm">
                     ✨ Welcome to my portfolio
                 </p>
                 <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">
                     Hi, I'm <br/> 
-                    <span class="bg-gradient-to-r from-sky-500 via-sky-500 to-purple-500 bg-clip-text text-transparent">Chris Teper</span>
+                    <span class="bg-gradient-to-r from-brand-blue via-brand-yellow to-brand-blue bg-clip-text text-transparent">Chris Teper</span>
                 </h1>
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-500 mb-8 h-12 flex items-center">
-                    <span class="mr-2">I am a</span> <span id="typed-text" class="text-sky-500"></span>
+                    <span class="mr-2">I am a</span> <span id="typed-text" class="text-slate-800 bg-brand-blue px-2 py-1 rounded-lg"></span>
                 </h2>
                 <p class="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
-                    Bridging the gap between <span class="font-bold text-sky-600">Web Development</span> and <span class="font-bold text-sky-600">Data Science</span> to build smart, clean, and dynamic applications.
+                    Bridging the gap between <span class="font-bold text-slate-900 bg-brand-yellow px-1 rounded">Web Development</span> and <span class="font-bold text-slate-900 bg-brand-yellow px-1 rounded">Data Science</span> to build smart, clean, and dynamic applications.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-sky-500 to-sky-600 text-white font-bold hover:from-sky-400 hover:to-sky-500 shadow-lg shadow-sky-500/30 transition-all transform hover:-translate-y-1">View Projects</a>
-                    <button onclick="openCvModal()" class="px-8 py-3.5 rounded-full bg-brand-yellow/30 border border-brand-yellow/50 text-slate-700 font-bold hover:border-sky-400 hover:text-sky-600 shadow-sm hover:shadow-md transition-all flex items-center gap-2 cursor-pointer">
-                        <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <a href="#projects" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-blue to-brand-yellow text-slate-900 font-bold hover:from-sky-400 hover:to-sky-500 shadow-lg shadow-brand-blue/50 transition-all transform hover:-translate-y-1">View Projects</a>
+                    <button onclick="openCvModal()" class="px-8 py-3.5 rounded-full bg-brand-yellow/30 border border-brand-yellow/50 text-slate-700 font-bold hover:border-brand-blue hover:text-slate-900 bg-brand-yellow px-1 rounded shadow-sm hover:shadow-md transition-all flex items-center gap-2 cursor-pointer">
+                        <svg class="w-5 h-5 text-slate-900 bg-brand-yellow px-1 rounded" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         <span>Lihat CV & Resume</span>
                     </button>
                 </div>
@@ -53,7 +53,7 @@
             <!-- Kanan: Image -->
             <div class="w-full md:w-1/2 flex justify-center relative gs-reveal-up" style="transition-delay: 200ms;">
                 <!-- Kotak dengan gradasi sebagai border -->
-                <div data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" class="relative w-[85%] max-w-[280px] sm:max-w-[320px] md:max-w-[360px] aspect-[4/5] rounded-[2.5rem] bg-gradient-to-br from-sky-400 via-sky-500 to-purple-500 p-1.5 shadow-2xl shadow-sky-300/50 group cursor-pointer transform transition-transform duration-500">
+                <div data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000" class="relative w-[85%] max-w-[280px] sm:max-w-[320px] md:max-w-[360px] aspect-[4/5] rounded-[2.5rem] bg-gradient-to-br from-brand-blue via-brand-yellow to-brand-blue p-1.5 shadow-2xl shadow-sky-300/50 group cursor-pointer transform transition-transform duration-500">
                     <!-- Container Gambar Dalam -->
                     <div class="w-full h-full rounded-[2.3rem] overflow-hidden bg-slate-100 relative">
                         <!-- Gradient Overlay Tipis pas dihover -->
@@ -90,7 +90,7 @@
                     Who am I?
                 </h3>
                 <p class="text-lg text-slate-600 leading-relaxed font-medium relative z-10">
-                    Hello! I'm Chris Teper Ferdiyanto, a Cum Laude Informatics graduate from Universitas Ahmad Dahlan. I specialize at the intersection of <span class="text-sky-500 font-bold">Data Science</span> and <span class="text-sky-500 font-bold">Web Development</span>. 
+                    Hello! I'm Chris Teper Ferdiyanto, a Cum Laude Informatics graduate from Universitas Ahmad Dahlan. I specialize at the intersection of <span class="text-slate-800 bg-brand-blue px-2 py-1 rounded-lg font-bold">Data Science</span> and <span class="text-slate-800 bg-brand-blue px-2 py-1 rounded-lg font-bold">Web Development</span>. 
                     <br><br>
                     With a strong foundation in data processing (Python, SQL) and modern web technologies (React, Node.js, PHP), I don't just analyze complex datasets—I build the <span class="text-slate-800 font-semibold border-b-2 border-sky-200">interactive platforms</span> to visualize and deliver those insights. Backed by my experience as a Data Science Mentee at Startup Campus and an Informatics Lab Assistant, I am passionate about transforming raw data into meaningful, user-friendly digital experiences.
                 </p>
@@ -118,8 +118,8 @@
                     <div class="absolute -right-4 -bottom-4 text-sky-100 group-hover:scale-110 transition-transform duration-500">
                         <svg class="w-40 h-40" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
                     </div>
-                    <h4 class="text-2xl font-black text-sky-500 mb-4 relative z-10">Education</h4>
-                    <div class="text-slate-800 font-bold relative z-10 text-xl mb-1">Informatics <span class="text-sky-500 text-sm bg-sky-50 px-2 py-0.5 rounded-full ml-1">Cum Laude</span></div>
+                    <h4 class="text-2xl font-black text-slate-800 bg-brand-blue px-2 py-1 rounded-lg mb-4 relative z-10">Education</h4>
+                    <div class="text-slate-800 font-bold relative z-10 text-xl mb-1">Informatics <span class="text-slate-800 bg-brand-blue px-2 py-1 rounded-lg text-sm bg-sky-50 px-2 py-0.5 rounded-full ml-1">Cum Laude</span></div>
                     <div class="text-slate-500 font-medium leading-tight relative z-10">Universitas Ahmad Dahlan</div>
                 </div>
             </div>
@@ -352,7 +352,7 @@
                         </p>
                         <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
                             <span class="text-xs font-bold text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1.5 rounded-md border border-slate-100">Final Score</span>
-                            <span class="text-2xl font-black text-sky-500">94.00</span>
+                            <span class="text-2xl font-black text-slate-800 bg-brand-blue px-2 py-1 rounded-lg">94.00</span>
                         </div>
                     </div>
                 </div>
@@ -784,7 +784,7 @@
             <span class="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-medium">christeperferdiyanto8362@gmail.com</span>
             <a href="https://linkedin.com" target="_blank" class="flex items-center gap-1.5 bg-sky-50 text-sky-700 hover:bg-brand-blue px-3 py-1.5 rounded-lg border border-sky-200 font-bold transition-colors">LinkedIn</a>
             <a href="#projects" onclick="closeCvModal()" class="flex items-center gap-1.5 bg-sky-50 text-sky-700 hover:bg-brand-blue px-3 py-1.5 rounded-lg border border-sky-200 font-bold transition-colors">Portofolio</a>
-            <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="flex items-center gap-1.5 bg-amber-50 text-amber-900 hover:bg-amber-100 px-3.5 py-1.5 rounded-lg font-extrabold border border-amber-300 transition-colors shadow-2xs" title="Buka Dokumen PDF Sertifikat TOEFL">TOEFL Certified (Score: 503) <span class="text-sky-600 font-black underline ml-0.5">[PDF]</span></a>
+            <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="flex items-center gap-1.5 bg-amber-50 text-amber-900 hover:bg-amber-100 px-3.5 py-1.5 rounded-lg font-extrabold border border-amber-300 transition-colors shadow-2xs" title="Buka Dokumen PDF Sertifikat TOEFL">TOEFL Certified (Score: 503) <span class="text-slate-900 bg-brand-yellow px-1 rounded font-black underline ml-0.5">[PDF]</span></a>
             <span class="flex items-center gap-1.5 bg-emerald-50 text-emerald-800 px-3.5 py-1.5 rounded-lg font-extrabold border border-emerald-300">IPK: 3.86 / 4.00 (Cum Laude)</span>
         </div>
 
@@ -802,7 +802,7 @@
             <div class="bg-gradient-to-r from-amber-50/50 via-slate-50 to-white p-6 rounded-2xl border border-amber-200/60 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h4 class="text-lg font-bold text-slate-900">UNIVERSITAS AHMAD DAHLAN - Yogyakarta, Indonesia</h4>
-                    <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Bachelor of Informatics <span class="text-amber-800 font-extrabold">(3.86/4.00, Cum Laude)</span>. <a href="transkrip-akademik-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-sky-600 hover:text-sky-800 underline font-bold cursor-pointer transition-colors" title="Buka Transkrip Asli (PDF)">[Transcript]</a></p>
+                    <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Bachelor of Informatics <span class="text-amber-800 font-extrabold">(3.86/4.00, Cum Laude)</span>. <a href="transkrip-akademik-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-slate-900 bg-brand-yellow px-1 rounded hover:text-sky-800 underline font-bold cursor-pointer transition-colors" title="Buka Transkrip Asli (PDF)">[Transcript]</a></p>
                 </div>
                 <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(Sep 2022 – 2026)</span>
             </div>
@@ -814,7 +814,7 @@
             <div class="bg-gradient-to-r from-emerald-50/40 via-slate-50 to-white p-6 rounded-2xl border border-emerald-200/60 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h4 class="text-lg font-bold text-slate-900">AHMAD DAHLAN LANGUAGE CENTER (ADLC) - Universitas Ahmad Dahlan</h4>
-                    <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Ahmad Dahlan English Proficiency Test (ADEPT / TOEFL Equivalent) <span class="text-emerald-800 font-extrabold">— Score: 503</span>. <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-sky-600 hover:text-sky-800 underline font-bold cursor-pointer transition-colors" title="Buka Sertifikat TOEFL Asli (PDF)">[Certificate]</a></p>
+                    <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Ahmad Dahlan English Proficiency Test (ADEPT / TOEFL Equivalent) <span class="text-emerald-800 font-extrabold">— Score: 503</span>. <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-slate-900 bg-brand-yellow px-1 rounded hover:text-sky-800 underline font-bold cursor-pointer transition-colors" title="Buka Sertifikat TOEFL Asli (PDF)">[Certificate]</a></p>
                     <div class="flex flex-wrap items-center gap-2.5 mt-2 text-xs md:text-sm font-bold text-slate-600">
                         <span>🎧 Listening: <span class="text-slate-900 font-black">70</span></span>
                         <span class="text-slate-300">•</span>
@@ -837,7 +837,7 @@
                     <h4 class="text-base md:text-lg font-bold text-slate-900">Laboratory Assistant - Informatics Laboratory, UAD</h4>
                     <span class="text-xs md:text-sm font-bold text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200 w-max">(Sep 2023 – Jun 2025)</span>
                 </div>
-                <p class="text-sm font-semibold text-sky-600 mb-3">Yogyakarta, Indonesia</p>
+                <p class="text-sm font-semibold text-slate-900 bg-brand-yellow px-1 rounded mb-3">Yogyakarta, Indonesia</p>
                 <ul class="list-disc pl-5 space-y-2 text-sm md:text-base text-slate-700 leading-relaxed">
                     <li>Supported practicum operations across multiple subjects (Computer Systems, OOP, Statistics, OS, Software Analysis, Computer Graphics) for 2+ classes per course (40 students/class) by preparing materials, software, and session readiness, ensuring smooth and on-time execution.</li>
                     <li>Delivered explanations of course materials and guided hands-on lab activities, assisting 80+ students per course in problem-solving and improving understanding as well as task completion rates.</li>
@@ -851,7 +851,7 @@
                     <h4 class="text-base md:text-lg font-bold text-slate-900">MSIB – Startup Campus</h4>
                     <span class="text-xs md:text-sm font-bold text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200 w-max">(Sep 2024 – Des 2024)</span>
                 </div>
-                <p class="text-sm font-bold text-sky-600 mb-1">Data Science</p>
+                <p class="text-sm font-bold text-slate-900 bg-brand-yellow px-1 rounded mb-1">Data Science</p>
                 <p class="text-xs text-slate-500 font-medium mb-3">Yogyakarta, Indonesia</p>
                 <ul class="list-disc pl-5 space-y-2 text-sm md:text-base text-slate-700 leading-relaxed">
                     <li>Completed end-to-end data analysis projects including data collection, preprocessing, exploratory data analysis (EDA), and visualization to generate actionable insights for decision-making.</li>
@@ -952,7 +952,7 @@
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
                         <div>
                             <h4 class="text-base font-bold text-slate-900">Social Assistance Decision Support System (Web-Based)</h4>
-                            <p class="text-xs font-semibold text-sky-600">Yogyakarta, Indonesia</p>
+                            <p class="text-xs font-semibold text-slate-900 bg-brand-yellow px-1 rounded">Yogyakarta, Indonesia</p>
                         </div>
                         <span class="text-xs font-bold bg-white px-3 py-1 rounded-lg border border-slate-200 w-max">(Jun 2026)</span>
                     </div>
@@ -994,7 +994,7 @@
                     <div>
                         <!-- Header -->
                         <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-800/80">
-                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-sky-500/30 text-2xl font-black shrink-0">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-brand-blue/50 text-2xl font-black shrink-0">
                                 📊
                             </div>
                             <div>
@@ -1098,7 +1098,7 @@
                         
                         <!-- Header -->
                         <div class="flex items-center gap-4 mb-5 pb-3.5 border-b border-slate-800/80">
-                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-600 flex items-center justify-center text-white shadow-lg shadow-sky-500/30 text-2xl font-black shrink-0">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-600 flex items-center justify-center text-white shadow-lg shadow-brand-blue/50 text-2xl font-black shrink-0">
                                 🌐
                             </div>
                             <div>
@@ -1206,7 +1206,7 @@
 
 <!-- Footer -->
 <footer class="bg-white border-t border-slate-100 py-10 text-center">
-    <a href="#" class="text-2xl font-extrabold tracking-tighter text-slate-900 inline-block mb-4">CHRIS<span class="text-sky-500">.</span></a>
+    <a href="#" class="text-2xl font-extrabold tracking-tighter text-slate-900 inline-block mb-4">CHRIS<span class="text-slate-800 bg-brand-blue px-2 py-1 rounded-lg">.</span></a>
     <p class="text-slate-500 font-medium text-sm mb-2">© 2026 Chris Teper Ferdiyanto. All rights reserved.</p>
     <p class="text-slate-400 text-xs">Crafted cleanly with Laravel 11, Tailwind CSS & Swiper.js.</p>
 </footer>
