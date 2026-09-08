@@ -25,7 +25,7 @@
             <!-- Kiri: Teks -->
             <div class="w-full md:w-1/2 gs-reveal-up mt-12 md:mt-0">
                 <p class="inline-block px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-600 font-bold tracking-wider uppercase mb-5 text-xs shadow-sm">
-                    ✨ Welcome to my portfolio
+                    âœ¨ Welcome to my portfolio
                 </p>
                 <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">
                     Hi, I'm <br/> 
@@ -85,10 +85,8 @@
                     <span class="w-8 h-1 bg-emerald-500 rounded-full"></span>
                     Who am I?
                 </h3>
-                <p class="text-lg text-slate-600 leading-relaxed font-medium relative z-10">
-                    Hello! I'm Chris Teper Ferdiyanto, a Cum Laude Informatics graduate from Universitas Ahmad Dahlan. I specialize at the intersection of <span class="text-emerald-500 font-bold">Data Science</span> and <span class="text-sky-500 font-bold">Web Development</span>. 
-                    <br><br>
-                    With a strong foundation in data processing (Python, SQL) and modern web technologies (React, Node.js, PHP), I don't just analyze complex datasets—I build the <span class="text-slate-800 font-semibold border-b-2 border-emerald-200">interactive platforms</span> to visualize and deliver those insights. Backed by my experience as a Data Science Mentee at Startup Campus and an Informatics Lab Assistant, I am passionate about transforming raw data into meaningful, user-friendly digital experiences.
+                <p class="text-slate-600 leading-relaxed text-lg text-justify">
+                    Informatics graduate (Cum Laude, 3.86 GPA) with a strong passion for Data Analytics and Data Science. Experienced in transforming raw data into strategic insights through the MSIB program, independent projects, and a role as a Laboratory Assistant. Proficient in using SQL, Python, Excel, Power BI, and Tableau for data cleaning, machine learning, and data visualization. Possesses excellent analytical skills and works well in teams, ready to contribute by providing data-driven recommendations to support organizational business decisions.
                 </p>
             </div>
 
@@ -107,7 +105,7 @@
                         <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-200">Current Status</h4>
                     </div>
                     <div class="text-3xl font-black mb-2 relative z-10 leading-tight">Open to<br>Work</div>
-                    <p class="text-emerald-100 font-medium relative z-10 mt-1 text-sm leading-relaxed">Seeking full-time roles in Data Science or Web Development.</p>
+                    <p class="text-emerald-100 font-medium relative z-10 mt-1 text-sm leading-relaxed">Seeking full-time roles in Data Science or Data Analyst.</p>
                 </div>
                 <!-- Box 2: Education -->
                 <div class="flex-1 bg-white p-8 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 transform hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-center relative overflow-hidden group">
@@ -135,27 +133,23 @@
 
         @php
             $allSkills = [
-                // Web Fundamental & Backend
-                ['name' => 'HTML5', 'folder' => 'html5', 'file' => 'html5-original'],
-                ['name' => 'CSS3', 'folder' => 'css3', 'file' => 'css3-original'],
-                ['name' => 'JavaScript', 'folder' => 'javascript', 'file' => 'javascript-original'],
-                ['name' => 'PHP', 'folder' => 'php', 'file' => 'php-original'],
-                ['name' => 'Laravel', 'folder' => 'laravel', 'file' => 'laravel-original'],
-                ['name' => 'MySQL', 'folder' => 'mysql', 'file' => 'mysql-original-wordmark'],
                 ['name' => 'Python', 'folder' => 'python', 'file' => 'python-original'],
-                
-                // Frontend, Tools & Data Science
-                ['name' => 'ReactJS', 'folder' => 'react', 'file' => 'react-original'],
-                ['name' => 'Next.js', 'folder' => 'nextjs', 'file' => 'nextjs-original', 'is_dark' => true],
-                ['name' => 'Tailwind CSS', 'folder' => 'tailwindcss', 'file' => 'tailwindcss-original'],
-                ['name' => 'Git', 'folder' => 'git', 'file' => 'git-original'],
                 ['name' => 'Pandas', 'folder' => 'pandas', 'file' => 'pandas-original'],
+                ['name' => 'NumPy', 'folder' => 'numpy', 'file' => 'numpy-original'],
+                ['name' => 'scikit-learn', 'folder' => 'scikitlearn', 'file' => 'scikitlearn-original'],
                 ['name' => 'Jupyter', 'folder' => 'jupyter', 'file' => 'jupyter-original'],
-                ['name' => 'Figma', 'folder' => 'figma', 'file' => 'figma-original']
+                ['name' => 'SQL', 'folder' => 'sqldeveloper', 'file' => 'sqldeveloper-original'],
+                ['name' => 'MySQL', 'folder' => 'mysql', 'file' => 'mysql-original-wordmark'],
+                ['name' => 'PostgreSQL', 'folder' => 'postgresql', 'file' => 'postgresql-original'],
+                ['name' => 'Excel', 'url' => 'https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg'],
+                ['name' => 'Tableau', 'url' => 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png'],
+                ['name' => 'Power BI', 'url' => 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg']
             ];
-            // Split skills into dua baris
-            $row1 = array_slice($allSkills, 0, 7);
-            $row2 = array_slice($allSkills, 7, 7);
+
+            // Split for two marquee rows
+            $half = ceil(count($allSkills) / 2);
+            $row1 = array_slice($allSkills, 0, $half);
+            $row2 = array_slice($allSkills, $half);
         @endphp
 
         <!-- Mask Image untuk efek pudar di sisi kiri dan kanan -->
@@ -166,21 +160,21 @@
                 <div class="marquee-content animate-marquee-left flex gap-4 md:gap-6 w-max">
                     @foreach($row1 as $skill)
                         <div class="bg-white border border-slate-100/80 px-5 py-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ $skill['folder'] }}/{{ $skill['file'] }}.svg" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
+                            <img src="{{ isset($skill['url']) ? $skill['url'] : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' . $skill['folder'] . '/' . $skill['file'] . '.svg' }}" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
                             <span class="font-bold text-slate-600 text-sm md:text-base">{{ $skill['name'] }}</span>
                         </div>
                     @endforeach
                     <!-- Duplicate -->
                     @foreach($row1 as $skill)
                         <div class="bg-white border border-slate-100/80 px-5 py-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ $skill['folder'] }}/{{ $skill['file'] }}.svg" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
+                            <img src="{{ isset($skill['url']) ? $skill['url'] : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' . $skill['folder'] . '/' . $skill['file'] . '.svg' }}" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
                             <span class="font-bold text-slate-600 text-sm md:text-base">{{ $skill['name'] }}</span>
                         </div>
                     @endforeach
                     <!-- Triplicate biar animasi gak patah di layar lebar -->
                     @foreach($row1 as $skill)
                         <div class="bg-white border border-slate-100/80 px-5 py-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ $skill['folder'] }}/{{ $skill['file'] }}.svg" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
+                            <img src="{{ isset($skill['url']) ? $skill['url'] : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' . $skill['folder'] . '/' . $skill['file'] . '.svg' }}" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
                             <span class="font-bold text-slate-600 text-sm md:text-base">{{ $skill['name'] }}</span>
                         </div>
                     @endforeach
@@ -192,21 +186,21 @@
                 <div class="marquee-content animate-marquee-right flex gap-4 md:gap-6 w-max">
                     @foreach($row2 as $skill)
                         <div class="bg-white border border-slate-100/80 px-5 py-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ $skill['folder'] }}/{{ $skill['file'] }}.svg" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
+                            <img src="{{ isset($skill['url']) ? $skill['url'] : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' . $skill['folder'] . '/' . $skill['file'] . '.svg' }}" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
                             <span class="font-bold text-slate-600 text-sm md:text-base">{{ $skill['name'] }}</span>
                         </div>
                     @endforeach
                     <!-- Duplicate -->
                     @foreach($row2 as $skill)
                         <div class="bg-white border border-slate-100/80 px-5 py-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ $skill['folder'] }}/{{ $skill['file'] }}.svg" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
+                            <img src="{{ isset($skill['url']) ? $skill['url'] : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' . $skill['folder'] . '/' . $skill['file'] . '.svg' }}" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
                             <span class="font-bold text-slate-600 text-sm md:text-base">{{ $skill['name'] }}</span>
                         </div>
                     @endforeach
                     <!-- Triplicate -->
                     @foreach($row2 as $skill)
                         <div class="bg-white border border-slate-100/80 px-5 py-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex items-center gap-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ $skill['folder'] }}/{{ $skill['file'] }}.svg" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
+                            <img src="{{ isset($skill['url']) ? $skill['url'] : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' . $skill['folder'] . '/' . $skill['file'] . '.svg' }}" alt="{{ $skill['name'] }}" class="w-6 h-6 md:w-7 md:h-7 {{ isset($skill['is_dark']) ? 'invert opacity-80' : '' }}" onerror="this.style.display='none'">
                             <span class="font-bold text-slate-600 text-sm md:text-base">{{ $skill['name'] }}</span>
                         </div>
                     @endforeach
@@ -217,97 +211,7 @@
     </div>
 </section>
 
-<!-- Certifications Section (Swiper Cards) -->
-<section id="certifications" class="py-24 bg-slate-900 text-white relative overflow-hidden">
-    <!-- Dekorasi -->
-    <div class="absolute left-1/4 top-0 w-[500px] h-[500px] bg-gradient-to-br from-emerald-500/20 to-transparent rounded-full blur-3xl -z-10"></div>
-    <div class="absolute right-0 bottom-0 w-[400px] h-[400px] bg-gradient-to-tl from-sky-500/20 to-transparent rounded-full blur-3xl -z-10"></div>
-    
-    <div class="max-w-6xl mx-auto px-6 gs-reveal-up text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Licenses & <span class="text-emerald-600">Certifications.</span></h2>
-        <p class="text-slate-400 text-lg font-medium">Swipe to explore my professional credentials.</p>
-    </div>
-    
-    <div class="w-full max-w-7xl mx-auto px-2 md:px-6 gs-reveal-up pb-10">
-        <!-- 3 Columns for Swiper -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-            
-            @php
-                $certFiles = \Illuminate\Support\Facades\File::files(public_path('sertif'));
-                $myskill = [];
-                $dicoding = [];
-                $others = [];
 
-                foreach($certFiles as $file) {
-                    $filename = $file->getFilename();
-                    $nameWithoutExt = pathinfo($filename, PATHINFO_FILENAME);
-                    $ext = strtolower($file->getExtension());
-                    
-                    if (preg_match('/-(2|3|4|5)$/', $nameWithoutExt) || preg_match('/_page-000(2|3|4)$/', $nameWithoutExt) || !in_array($ext, ['png', 'jpg', 'jpeg'])) {
-                        continue;
-                    }
-
-                    $title = "Professional Certificate";
-                    $category = 'others';
-                    
-                    if (str_starts_with($nameWithoutExt, 'HG5B')) {
-                        $title = "MySkill Course Certificate";
-                        $category = 'myskill';
-                    } elseif (stripos($nameWithoutExt, 'Dicoding') !== false) {
-                        $title = "Dicoding Certificate";
-                        $parts = explode('Indonesia', $nameWithoutExt);
-                        if (count($parts) > 1) {
-                            $sub = trim(str_replace(['-1', ',', 'a', 'js', 'r', 'v', 'w e', 'y', 'fa', 'data'], 
-                                                    ['', '', 'Android', 'JavaScript', 'React', 'Vue', 'Web Engine', 'Python', 'Frontend', 'Data'], 
-                                                    $parts[1]));
-                            if ($sub) $title .= ' - ' . ucwords($sub);
-                        }
-                        $category = 'dicoding';
-                    } elseif (stripos($nameWithoutExt, 'certificate') !== false) {
-                        $clean = str_replace(['certificate', '_', '-1', '(1)'], [' ', ' ', '', ''], $nameWithoutExt);
-                        $title = ucwords(trim($clean)) . " (HackerRank)";
-                    } else {
-                        $clean = str_replace(['_', '-1'], [' ', ''], $nameWithoutExt);
-                        $title = ucwords(trim($clean));
-                    }
-                    
-                    $item = ['file' => $filename, 'title' => $title];
-                    if($category == 'myskill') $myskill[] = $item;
-                    elseif($category == 'dicoding') $dicoding[] = $item;
-                    else $others[] = $item;
-                }
-                
-                $collections = [
-                    'MySkill Bootcamp' => $myskill,
-                    'Dicoding Academy' => $dicoding,
-                    'General & Others' => $others
-                ];
-            @endphp
-            
-            @foreach($collections as $colTitle => $items)
-                <div class="flex flex-col items-center w-full">
-                    <h3 class="text-sm font-bold text-sky-400 mb-8 bg-slate-800/60 px-5 py-2 rounded-full border border-slate-700/50 shadow-lg">{{ $colTitle }}</h3>
-                    <!-- Swiper -->
-                    <div class="swiper cert-swiper w-[280px] sm:w-[320px] md:w-[260px] lg:w-[320px]">
-                        <div class="swiper-wrapper">
-                            @foreach($items as $item)
-                                <div class="swiper-slide bg-emerald-600 p-4 flex flex-col items-center justify-center text-center border border-slate-700 rounded-2xl shadow-xl">
-                                    <img src="{{ asset('sertif/' . $item['file']) }}" alt="{{ $item['title'] }}" class="w-full h-auto max-h-[35vh] rounded-lg shadow-xl shadow-black/40 mb-4 object-contain bg-white/5">
-                                    <h4 class="text-xs font-bold text-white mb-2 line-clamp-2 leading-relaxed" title="{{ $item['title'] }}">{{ $item['title'] }}</h4>
-                                    <div class="mt-auto bg-slate-800/80 px-3 py-1 rounded-full border border-slate-700">
-                                        <span class="text-slate-400 text-[9px] font-semibold uppercase tracking-wider">Credential</span>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-
-        </div>
-        </div>
-    </div>
-</section>
 
 <!-- Experience Section -->
 <section id="experience" class="py-32 bg-slate-50 relative overflow-hidden">
@@ -388,71 +292,31 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16 gs-reveal-up">
             <h2 class="text-4xl font-extrabold text-slate-900">Featured Projects</h2>
-            <p class="text-slate-500 mt-4 font-medium text-lg">A colorful harmony of Data Science and Web Development.</p>
+            
         </div>
 
         @php
             $projects = [
                 [
-                    'title' => 'Sistem Informasi Rumah Sakit (RS)',
-                    'category' => 'Healthcare Tech & SIMRS Pro',
-                    'image' => asset('RS.png'),
-                    'color' => 'amber',
+                    'title' => 'E-Commerce Churn Risk Analytics',
+                    'category' => 'Business Intelligence',
+                    'image' => asset('analisis.png'),
+                    'color' => 'blue',
                     'delay' => '0ms',
                     'tags' => [
-                        ['name' => 'JavaScript Pro', 'color' => 'amber'],
-                        ['name' => 'MySQL Enterprise', 'color' => 'emerald'],
-                        ['name' => 'CSS3 Modern', 'color' => 'emerald'],
+                        ['name' => 'MySQL', 'color' => 'sky'],
+                        ['name' => 'Tableau', 'color' => 'blue'],
+                        ['name' => 'Data Analytics', 'color' => 'indigo'],
                     ],
-                    'desc_short' => 'Platform SIMRS Terpadu untuk manajemen antrean pendaftaran, triase IGD klinis, anjungan LIS laboratorium, dan logistik gudang farmasi.',
-                    'desc_full' => 'Aplikasi Sistem Informasi Rumah Sakit (SIMRS) berkecepatan tinggi dengan arsitektur Hybrid Gateway. Mengintegrasikan loket generator nomor antrean (Golongan Lansia A, Umum B, Balita C), pemeriksaan skrining triase IGD, ruang kerja dokter & RME, sistem billing kasir, anjungan LIS laboratorium medik, hingga gudang stok depo obat dengan sistem closed-loop inventory berpenurunan otomatis terhubung database MySQL.',
-                    'tech_stack' => 'JavaScript ES6 Reactive Engine, MySQL V5.0 Enterprise Schema, XAMPP/PHP Sync Architecture, Custom Modal UI, Vanilla CSS3 Glassmorphism & High Contrast Dark Mode.',
-                    'system_db' => 'Sinkronisasi MySQL 2 arah dengan fallback buffer offline dalam browser memory untuk ketahanan pelayanan medis 24/7 tanpa henti.',
-                    'links' => [
-                        ['type' => 'live', 'url' => 'https://magical-peony-6a6f9c.netlify.app/', 'text' => 'Live Demo'],
-                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/sistem-informasi-rumah-sakit', 'text' => 'Source Code']
-                    ]
+                    'desc_short' => 'Analisis komprehensif terhadap data pelanggan e-commerce untuk menemukan akar penyebab churn dan merumuskan strategi retensi.',
+                    'desc_full' => 'Proyek analisis end-to-end (ETL) yang melibatkan Data Ingestion dan Cleansing menggunakan MySQL terhadap 50.000+ data pelanggan. Hasil pembersihan divisualisasikan ke dalam satu narasi interaktif menggunakan Tableau (terdiri dari 4 dashboard analitik terpadu) untuk mengidentifikasi pola perilaku pelanggan dan merumuskan strategi retensi bisnis.',
+                    'tech_stack' => 'MySQL (Data Cleansing & Transformation), Tableau (Data Visualization).',
+                    'system_db' => 'Data diekstrak dan diproses di MySQL lokal, kemudian dihubungkan ke Tableau untuk visualisasi dinamis.',
+                    'links' => []
                 ],
-                [
-                    'title' => 'Portal TI Terpadu & Web-GIS Basarnas',
-                    'category' => 'GovTech & GIS System (Magang TI)',
-                    'image' => asset('basarnas.png'),
-                    'color' => 'amber',
-                    'delay' => '0ms',
-                    'tags' => [
-                        ['name' => 'Web-GIS', 'color' => 'emerald'],
-                        ['name' => 'NMS & Helpdesk', 'color' => 'amber'],
-                        ['name' => 'Leaflet.js', 'color' => 'emerald'],
-                    ],
-                    'desc_short' => 'Sistem Informasi Terpadu Kantor SAR: Manajemen Aset QR, Helpdesk, Monitoring NMS, dan Peta Telemetri Operasi SAR.',
-                    'desc_full' => 'Aplikasi web modern (Single Page Application) hasil Inovasi Proyek Akhir Magang Bidang TI di Kantor Pencarian dan Pertolongan (BASARNAS). Mengintegrasikan 7 modul pelayanan teknis profesional: Dashboard statistik real-time, E-Asset berlabel QR Code, Layanan Helpdesk & Ticketing, Simulator NMS (Network Management System) & Topologi Jaringan Cisco/MikroTik, Web-GIS pemetaan Pos SAR dan Kapal Patroli Laut KN SAR Setyaki 224, serta Buku Saku Digital SOP TI.',
-                    'tech_stack' => 'HTML5 Modular SPA, Vanilla JavaScript, Leaflet.js / OpenStreetMap, Chart.js, Web Audio API (Sistem Sirene Darurat), Executive Basarnas Orange Theme.',
-                    'system_db' => 'Arsitektur Client-Side Reactive Single Page Application (SPA) yang dirancang secara portable dengan sistem manajemen state memori dan ekspor dokumen formal PDF/Excel.',
-                    'links' => [
-                        ['type' => 'live', 'url' => 'https://christeperferdiyanto571.github.io/portal-ti-basarnas-cilacap/', 'text' => 'Live Demo'],
-                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/portal-ti-basarnas-cilacap', 'text' => 'Source Code']
-                    ]
-                ],
-                [
-                    'title' => 'ARFF Airport Emergency Command & Telemetry Hub',
-                    'category' => 'Aviation Tech & Web Dev',
-                    'image' => asset('arff.png'),
-                    'color' => 'amber',
-                    'delay' => '0ms',
-                    'tags' => [
-                        ['name' => 'PHP 8.2', 'color' => 'amber'],
-                        ['name' => 'SQLite / MySQL', 'color' => 'emerald'],
-                        ['name' => 'Looker Studio', 'color' => 'emerald'],
-                    ],
-                    'desc_short' => 'Sistem telemetri kesiapsiagaan armada damkar aviasi & analitik waktu respon Golden Time (<180 Detik) berstandar ICAO Annex 14.',
-                    'desc_full' => 'Platform pusat kendali operasi (Command Hub) dan e-Checklist untuk digitalisasi pemantauan armada pemadam aviasi (Rosenbauer Panther). Dibekali mesin analitik Chart.js untuk memvalidasi batas kritis Golden Time (<180 detik) sesuai standar internasional ICAO Annex 14, serta integrasi ekspor langsung ke Google Spreadsheet & Looker Studio untuk presentasi eksekutif GM Bandara.',
-                    'tech_stack' => 'PHP 8.2 (OOP/PDO), SQLite & MySQL Zero-Config, Vanilla CSS (Tactical Sage Theme), Chart.js, Looker Studio Connector.',
-                    'system_db' => 'Arsitektur Modular Web Server. Menggunakan database hybrid (SQLite ber-seeder otomatis dan skema MySQL ekosistem BUMN/Injourney) dengan pipeline ekspor XLS terstandar.',
-                    'links' => [
-                        ['type' => 'live', 'url' => 'http://arff-telemetry-hub.infinityfreeapp.com/?i=1', 'text' => 'Live Demo'],
-                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/arff-airport-telemetry-hub', 'text' => 'Source Code']
-                    ]
-                ],
+                
+                
+                
                 [
                     'title' => 'Sales & Order Data Analysis',
                     'category' => 'Data Analysis',
@@ -471,25 +335,7 @@
                         ['type' => 'download', 'url' => asset('downloads/Sales-Analysis-Order-Data.xlsx'), 'text' => 'Download Data']
                     ]
                 ],
-                [
-                    'title' => 'JogjaKarya UMKM E-commerce',
-                    'category' => 'Web Development',
-                    'image' => asset('JogjaKarya.png'),
-                    'color' => 'amber',
-                    'delay' => '0ms',
-                    'tags' => [
-                        ['name' => 'Laravel', 'color' => 'red'],
-                        ['name' => 'Tailwind', 'color' => 'cyan'],
-                        ['name' => 'MySQL', 'color' => 'yellow'],
-                    ],
-                    'desc_short' => 'Full-stack E-commerce platform khusus produk UMKM Yogyakarta. Memiliki sistem Admin Panel, manajemen pesanan, dan keranjang belanja dinamis bertema Sogan Batik.',
-                    'desc_full' => 'Sebuah platform E-commerce lengkap yang dirancang khusus untuk membantu UMKM di Yogyakarta memasarkan produk mereka. Menggunakan tema Sogan Batik yang khas, sistem ini dilengkapi fitur seperti keranjang belanja, checkout, dan Admin Panel untuk manajemen produk dan pesanan.',
-                    'tech_stack' => 'Laravel (PHP), Tailwind CSS, Alpine.js.',
-                    'system_db' => 'Arsitektur Monolithic MVC (Model-View-Controller). Database menggunakan MySQL relasional untuk menyimpan data user, produk, dan transaksi.',
-                    'links' => [
-                        ['type' => 'live', 'url' => 'http://web-jogjakarya-umkm.page.gd/public/', 'text' => 'Live App']
-                    ]
-                ],
+                
                 [
                     'title' => 'Global Economic & Human Development',
                     'category' => 'Data Science',
@@ -546,7 +392,7 @@
                 ],
                 [
                     'title' => 'BPS Statistics Dashboard',
-                    'category' => 'Web Development',
+                    'category' => 'Data Analysis',
                     'image' => asset('sensus.png'),
                     'color' => 'cyan',
                     'delay' => '300ms',
@@ -564,7 +410,7 @@
                 ],
                 [
                     'title' => 'SPK Bantuan Sosial Desa',
-                    'category' => 'Web Development',
+                    'category' => 'Data Analysis',
                     'image' => asset('SPK.png'),
                     'color' => 'emerald',
                     'delay' => '400ms',
@@ -580,26 +426,7 @@
                         ['type' => 'live', 'url' => 'http://spk-bansos.freedev.app', 'text' => 'Live App']
                     ]
                 ],
-                [
-                    'title' => 'ChrisFlix Premium Movies',
-                    'category' => 'Web Development',
-                    'image' => asset('chrisflix.png'),
-                    'color' => 'red',
-                    'delay' => '500ms',
-                    'tags' => [
-                        ['name' => 'HTML/CSS', 'color' => 'orange'],
-                        ['name' => 'Vanilla JS', 'color' => 'yellow'],
-                        ['name' => 'TMDB API', 'color' => 'green'],
-                    ],
-                    'desc_short' => 'A visually stunning, Netflix-inspired movie discovery web application. Integrating with the TMDB API to fetch trending movies.',
-                    'desc_full' => 'Aplikasi web pencarian film yang terinspirasi dari Netflix dengan visual memukau bergaya glassmorphism. Terintegrasi langsung dengan TMDB API untuk mengambil data film yang sedang tren, pencarian real-time, dan menampilkan metadata sinematik lengkap.',
-                    'tech_stack' => 'HTML5, CSS3, Vanilla JavaScript (ES6+), Fetch API.',
-                    'system_db' => 'Aplikasi Front-End murni. Tidak memiliki database sendiri; seluruh data (film, poster, rating) ditarik secara real-time dari REST API eksternal (The Movie Database).',
-                    'links' => [
-                        ['type' => 'live', 'url' => 'https://christeperferdiyanto571.github.io/movie-app-premium/', 'text' => 'Live App'],
-                        ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/movie-app-premium', 'text' => 'Source Code']
-                    ]
-                ],
+                
                 [
                     'title' => 'MSME Data Clustering Tool',
                     'category' => 'Data Science',
@@ -617,6 +444,8 @@
                     'system_db' => 'Pemrosesan Client-Side sepenuhnya (WebAssembly). Data Excel yang diunggah pengguna diproses di dalam memori browser, menjamin privasi karena data tidak pernah dikirim ke server.',
                     'links' => [
                         ['type' => 'live', 'url' => 'https://christeperferdiyanto571.github.io/msme-clustering/', 'text' => 'Live App'],
+                        ['type' => 'live', 'url' => 'https://colab.research.google.com/drive/1dUFo5OQ-LFZygsdlhw7R8UrumswGY2RZ?usp=sharing', 'text' => 'Colab'],
+                        ['type' => 'live', 'url' => 'https://canva.link/3tsqieq0xwwy4sp', 'text' => 'Presentation'],
                         ['type' => 'github', 'url' => 'https://github.com/christeperferdiyanto571/msme-clustering', 'text' => 'Source Code']
                     ]
                 ],
@@ -800,7 +629,7 @@
                     <h4 class="text-lg font-bold text-slate-900">UNIVERSITAS AHMAD DAHLAN - Yogyakarta, Indonesia</h4>
                     <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Bachelor of Informatics <span class="text-amber-800 font-extrabold">(3.86/4.00, Cum Laude)</span>. <a href="transkrip-akademik-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-emerald-600 hover:text-emerald-800 underline font-bold cursor-pointer transition-colors" title="Buka Transkrip Asli (PDF)">[Transcript]</a></p>
                 </div>
-                <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(Sep 2022 – 2026)</span>
+                <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(Sep 2022 â€“ 2026)</span>
             </div>
         </div>
 
@@ -810,16 +639,16 @@
             <div class="bg-gradient-to-r from-emerald-50/40 via-slate-50 to-white p-6 rounded-2xl border border-emerald-200/60 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h4 class="text-lg font-bold text-slate-900">AHMAD DAHLAN LANGUAGE CENTER (ADLC) - Universitas Ahmad Dahlan</h4>
-                    <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Ahmad Dahlan English Proficiency Test (ADEPT / TOEFL Equivalent) <span class="text-emerald-800 font-extrabold">— Score: 503</span>. <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-emerald-600 hover:text-emerald-800 underline font-bold cursor-pointer transition-colors" title="Buka Sertifikat TOEFL Asli (PDF)">[Certificate]</a></p>
+                    <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Ahmad Dahlan English Proficiency Test (ADEPT / TOEFL Equivalent) <span class="text-emerald-800 font-extrabold">â€” Score: 503</span>. <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-emerald-600 hover:text-emerald-800 underline font-bold cursor-pointer transition-colors" title="Buka Sertifikat TOEFL Asli (PDF)">[Certificate]</a></p>
                     <div class="flex flex-wrap items-center gap-2.5 mt-2 text-xs md:text-sm font-bold text-slate-600">
-                        <span>🎧 Listening: <span class="text-slate-900 font-black">70</span></span>
-                        <span class="text-slate-300">•</span>
-                        <span>✍️ Structure & Written: <span class="text-slate-900 font-black">72</span></span>
-                        <span class="text-slate-300">•</span>
-                        <span>📖 Reading: <span class="text-slate-900 font-black">61</span></span>
+                        <span>ðŸŽ§ Listening: <span class="text-slate-900 font-black">70</span></span>
+                        <span class="text-slate-300">â€¢</span>
+                        <span>âœï¸ Structure & Written: <span class="text-slate-900 font-black">72</span></span>
+                        <span class="text-slate-300">â€¢</span>
+                        <span>ðŸ“– Reading: <span class="text-slate-900 font-black">61</span></span>
                     </div>
                 </div>
-                <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(May 2025 – 2026)</span>
+                <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(May 2025 â€“ 2026)</span>
             </div>
         </div>
 
@@ -831,7 +660,7 @@
             <div class="border-l-2 border-emerald-500 pl-5 md:pl-6 pb-6 mb-6 border-b border-slate-100">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-2">
                     <h4 class="text-base md:text-lg font-bold text-slate-900">Laboratory Assistant - Informatics Laboratory, UAD</h4>
-                    <span class="text-xs md:text-sm font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 w-max">(Sep 2023 – Jun 2025)</span>
+                    <span class="text-xs md:text-sm font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 w-max">(Sep 2023 â€“ Jun 2025)</span>
                 </div>
                 <p class="text-sm font-semibold text-emerald-600 mb-3">Yogyakarta, Indonesia</p>
                 <ul class="list-disc pl-5 space-y-2 text-sm md:text-base text-slate-700 leading-relaxed">
@@ -844,8 +673,8 @@
             <!-- Exp 2 -->
             <div class="border-l-2 border-emerald-500 pl-5 md:pl-6 pb-2">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-1">
-                    <h4 class="text-base md:text-lg font-bold text-slate-900">MSIB – Startup Campus</h4>
-                    <span class="text-xs md:text-sm font-bold text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200 w-max">(Sep 2024 – Des 2024)</span>
+                    <h4 class="text-base md:text-lg font-bold text-slate-900">MSIB â€“ Startup Campus</h4>
+                    <span class="text-xs md:text-sm font-bold text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200 w-max">(Sep 2024 â€“ Des 2024)</span>
                 </div>
                 <p class="text-sm font-bold text-sky-600 mb-1">Data Science</p>
                 <p class="text-xs text-slate-500 font-medium mb-3">Yogyakarta, Indonesia</p>
@@ -931,7 +760,7 @@
                 <div class="bg-slate-50/80 p-6 rounded-2xl border border-slate-200">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
                         <div>
-                            <h4 class="text-base font-bold text-slate-900">Excel Data Analysis Project – Karirnex Bootcamp</h4>
+                            <h4 class="text-base font-bold text-slate-900">Excel Data Analysis Project â€“ Karirnex Bootcamp</h4>
                             <p class="text-xs font-semibold text-purple-600">Yogyakarta, Indonesia</p>
                         </div>
                         <span class="text-xs font-bold bg-white px-3 py-1 rounded-lg border border-slate-200 w-max">(Okt 2025)</span>
@@ -991,7 +820,7 @@
                         <!-- Header -->
                         <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-800/80">
                             <div class="w-12 h-12 rounded-2xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-emerald-500/30 text-2xl font-black shrink-0">
-                                📊
+                                ðŸ“Š
                             </div>
                             <div>
                                 <span class="text-[11px] font-black text-emerald-400 uppercase tracking-widest block mb-0.5">Data & Analytics</span>
@@ -1034,7 +863,7 @@
                                     <div class="font-extrabold text-sky-300 mb-0.5 flex items-center gap-2 text-xs">
                                         <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Data Processing
                                     </div>
-                                    <p class="text-xs text-slate-300 pl-3.5">data cleaning, data validation, ETL (extract–transform–load)</p>
+                                    <p class="text-xs text-slate-300 pl-3.5">data cleaning, data validation, ETL (extractâ€“transformâ€“load)</p>
                                 </div>
                                 <div>
                                     <div class="font-extrabold text-teal-300 mb-0.5 flex items-center gap-2 text-xs">
@@ -1063,7 +892,7 @@
                         <!-- Header -->
                         <div class="flex items-center gap-4 mb-5 pb-3.5 border-b border-slate-800/80">
                             <div class="w-12 h-12 rounded-2xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-emerald-500/30 text-2xl font-black shrink-0">
-                                💻
+                                ðŸ’»
                             </div>
                             <div>
                                 <span class="text-[11px] font-black text-emerald-400 uppercase tracking-widest block mb-0.5">Systems & Network</span>
@@ -1095,7 +924,7 @@
                         <!-- Header -->
                         <div class="flex items-center gap-4 mb-5 pb-3.5 border-b border-slate-800/80">
                             <div class="w-12 h-12 rounded-2xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-sky-500/30 text-2xl font-black shrink-0">
-                                🌐
+                                ðŸŒ
                             </div>
                             <div>
                                 <span class="text-[11px] font-black text-sky-400 uppercase tracking-widest block mb-0.5">Full Stack & Frameworks</span>
@@ -1125,7 +954,7 @@
                         <!-- Header -->
                         <div class="flex items-center gap-4 mb-5 pb-3.5 border-b border-slate-800/80">
                             <div class="w-12 h-12 rounded-2xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-amber-500/30 text-2xl font-black shrink-0">
-                                🔥
+                                ðŸ”¥
                             </div>
                             <div>
                                 <span class="text-[11px] font-black text-amber-400 uppercase tracking-widest block mb-0.5">Professional Qualities</span>
@@ -1203,14 +1032,14 @@
 <!-- Footer -->
 <footer class="bg-white border-t border-slate-100 py-10 text-center">
     <a href="#" class="text-2xl font-extrabold tracking-tighter text-slate-900 inline-block mb-4">CHRIS<span class="text-emerald-500">.</span></a>
-    <p class="text-slate-500 font-medium text-sm mb-2">© 2026 Chris Teper Ferdiyanto. All rights reserved.</p>
+    <p class="text-slate-500 font-medium text-sm mb-2">Â© 2026 Chris Teper Ferdiyanto. All rights reserved.</p>
     <p class="text-slate-400 text-xs">Crafted cleanly with Laravel 11, Tailwind CSS & Swiper.js.</p>
 </footer>
 
 <script>
     // Typed.js Implementation
     new Typed('#typed-text', {
-        strings: ['Web Developer.', 'Data Scientist.'],
+        strings: ['Data Analyst.', 'Data Scientist.'],
         typeSpeed: 60,
         backSpeed: 40,
         backDelay: 2500,
@@ -1353,4 +1182,6 @@ const projectsData = @json($projects);
     }
 </script>
 @endsection
+
+
 
