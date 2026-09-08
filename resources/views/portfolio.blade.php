@@ -34,8 +34,8 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-500 mb-8 h-12 flex items-center">
                     <span class="mr-2">I am a</span> <span id="typed-text" class="text-emerald-500"></span>
                 </h2>
-                <p class="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
-                    Bridging the gap between <span class="font-bold text-emerald-600">Web Development</span> and <span class="font-bold text-sky-600">Data Science</span> to build smart, clean, and dynamic applications.
+                <p class="text-lg text-slate-500 mb-10 max-w-xl leading-relaxed gs-reveal">
+                    Bridging the gap between <span class="font-bold text-emerald-600">Data Analytics</span> and <span class="font-bold text-sky-600">Data Science</span> to build smart, clean, and dynamic solutions.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="#projects" class="px-8 py-3.5 rounded-full bg-emerald-600 text-white font-bold hover:from-sky-400 hover:to-emerald-500 shadow-lg shadow-emerald-500/30 transition-all transform hover:-translate-y-1">View Projects</a>
