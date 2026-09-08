@@ -25,7 +25,7 @@
             <!-- Kiri: Teks -->
             <div class="w-full md:w-1/2 gs-reveal-up mt-12 md:mt-0">
                 <p class="inline-block px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-600 font-bold tracking-wider uppercase mb-5 text-xs shadow-sm">
-                    âœ¨ Welcome to my portfolio
+                    ✨ Welcome to my portfolio
                 </p>
                 <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">
                     Hi, I'm <br/> 
@@ -617,7 +617,7 @@
         <div class="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 mb-10">
             <h3 class="text-sm font-extrabold uppercase text-slate-500 tracking-wider mb-3">SUMMARY</h3>
             <p class="text-slate-700 leading-relaxed text-sm md:text-base text-justify font-normal">
-                Bachelor's graduate in Informatics from Universitas Ahmad Dahlan with a strong interest in Information Technology, Data Analytics, Data Science, and Web Development. Experienced as an Informatics Laboratory Assistant, responsible for preparing practical materials, mentoring students, assessing practical work, troubleshooting software issues, and supporting computer laboratory management. Skilled in data processing, cleaning, validation, and visualization using Microsoft Excel, SQL, Python (Pandas), Power BI, and Tableau, as well as developing web applications using Laravel, React.js, PHP, HTML, CSS, JavaScript, and MySQL. Familiar with Windows, Linux, basic computer networking, and IT troubleshooting. A fast learner with strong analytical, problem-solving, communication, and teamwork skills, eager to contribute as an IT Support, Data Analyst, Data Scientist, System Administrator, or Web Developer.
+                Informatics graduate from Universitas Ahmad Dahlan with a strong focus on Data Analytics and Data Science. Experienced as a Laboratory Assistant in preparing practical materials and mentoring students. Skilled in data processing, cleaning, validation, and visualization using Microsoft Excel, SQL, Python (Pandas), Power BI, and Tableau. Has foundational knowledge in developing web applications to build interactive data dashboards. A fast learner with strong analytical, problem-solving, and teamwork skills, eager to contribute as a Data Analyst or Data Scientist.
             </p>
         </div>
 
@@ -629,7 +629,7 @@
                     <h4 class="text-lg font-bold text-slate-900">UNIVERSITAS AHMAD DAHLAN - Yogyakarta, Indonesia</h4>
                     <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Bachelor of Informatics <span class="text-amber-800 font-extrabold">(3.86/4.00, Cum Laude)</span>. <a href="transkrip-akademik-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-emerald-600 hover:text-emerald-800 underline font-bold cursor-pointer transition-colors" title="Buka Transkrip Asli (PDF)">[Transcript]</a></p>
                 </div>
-                <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(Sep 2022 â€“ 2026)</span>
+                <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(Sep 2022 – 2026)</span>
             </div>
         </div>
 
@@ -639,16 +639,16 @@
             <div class="bg-gradient-to-r from-emerald-50/40 via-slate-50 to-white p-6 rounded-2xl border border-emerald-200/60 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <h4 class="text-lg font-bold text-slate-900">AHMAD DAHLAN LANGUAGE CENTER (ADLC) - Universitas Ahmad Dahlan</h4>
-                    <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Ahmad Dahlan English Proficiency Test (ADEPT / TOEFL Equivalent) <span class="text-emerald-800 font-extrabold">â€” Score: 503</span>. <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-emerald-600 hover:text-emerald-800 underline font-bold cursor-pointer transition-colors" title="Buka Sertifikat TOEFL Asli (PDF)">[Certificate]</a></p>
+                    <p class="text-sm md:text-base font-semibold text-slate-700 mt-1.5">Ahmad Dahlan English Proficiency Test (ADEPT / TOEFL Equivalent) <span class="text-emerald-800 font-extrabold">— Score: 503</span>. <a href="sertifikat-toefl-chris.pdf" target="_blank" onclick="event.stopPropagation();" class="text-emerald-600 hover:text-emerald-800 underline font-bold cursor-pointer transition-colors" title="Buka Sertifikat TOEFL Asli (PDF)">[Certificate]</a></p>
                     <div class="flex flex-wrap items-center gap-2.5 mt-2 text-xs md:text-sm font-bold text-slate-600">
-                        <span>ðŸŽ§ Listening: <span class="text-slate-900 font-black">70</span></span>
-                        <span class="text-slate-300">â€¢</span>
+                        <span>🎧 Listening: <span class="text-slate-900 font-black">70</span></span>
+                        <span class="text-slate-300">•</span>
                         <span>âœï¸ Structure & Written: <span class="text-slate-900 font-black">72</span></span>
-                        <span class="text-slate-300">â€¢</span>
-                        <span>ðŸ“– Reading: <span class="text-slate-900 font-black">61</span></span>
+                        <span class="text-slate-300">•</span>
+                        <span>📖 Reading: <span class="text-slate-900 font-black">61</span></span>
                     </div>
                 </div>
-                <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(May 2025 â€“ 2026)</span>
+                <span class="text-sm font-bold text-slate-500 px-3 py-1 bg-white rounded-xl border border-slate-200 shadow-sm w-max">(May 2025 – 2026)</span>
             </div>
         </div>
 
@@ -660,7 +660,7 @@
             <div class="border-l-2 border-emerald-500 pl-5 md:pl-6 pb-6 mb-6 border-b border-slate-100">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-2">
                     <h4 class="text-base md:text-lg font-bold text-slate-900">Laboratory Assistant - Informatics Laboratory, UAD</h4>
-                    <span class="text-xs md:text-sm font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 w-max">(Sep 2023 â€“ Jun 2025)</span>
+                    <span class="text-xs md:text-sm font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 w-max">(Sep 2023 – Jun 2025)</span>
                 </div>
                 <p class="text-sm font-semibold text-emerald-600 mb-3">Yogyakarta, Indonesia</p>
                 <ul class="list-disc pl-5 space-y-2 text-sm md:text-base text-slate-700 leading-relaxed">
@@ -673,8 +673,8 @@
             <!-- Exp 2 -->
             <div class="border-l-2 border-emerald-500 pl-5 md:pl-6 pb-2">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-1">
-                    <h4 class="text-base md:text-lg font-bold text-slate-900">MSIB â€“ Startup Campus</h4>
-                    <span class="text-xs md:text-sm font-bold text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200 w-max">(Sep 2024 â€“ Des 2024)</span>
+                    <h4 class="text-base md:text-lg font-bold text-slate-900">MSIB – Startup Campus</h4>
+                    <span class="text-xs md:text-sm font-bold text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-200 w-max">(Sep 2024 – Des 2024)</span>
                 </div>
                 <p class="text-sm font-bold text-sky-600 mb-1">Data Science</p>
                 <p class="text-xs text-slate-500 font-medium mb-3">Yogyakarta, Indonesia</p>
@@ -760,7 +760,7 @@
                 <div class="bg-slate-50/80 p-6 rounded-2xl border border-slate-200">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
                         <div>
-                            <h4 class="text-base font-bold text-slate-900">Excel Data Analysis Project â€“ Karirnex Bootcamp</h4>
+                            <h4 class="text-base font-bold text-slate-900">Excel Data Analysis Project – Karirnex Bootcamp</h4>
                             <p class="text-xs font-semibold text-purple-600">Yogyakarta, Indonesia</p>
                         </div>
                         <span class="text-xs font-bold bg-white px-3 py-1 rounded-lg border border-slate-200 w-max">(Okt 2025)</span>
@@ -820,7 +820,7 @@
                         <!-- Header -->
                         <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-800/80">
                             <div class="w-12 h-12 rounded-2xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-emerald-500/30 text-2xl font-black shrink-0">
-                                ðŸ“Š
+                                📄Š
                             </div>
                             <div>
                                 <span class="text-[11px] font-black text-emerald-400 uppercase tracking-widest block mb-0.5">Data & Analytics</span>
@@ -863,7 +863,7 @@
                                     <div class="font-extrabold text-sky-300 mb-0.5 flex items-center gap-2 text-xs">
                                         <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Data Processing
                                     </div>
-                                    <p class="text-xs text-slate-300 pl-3.5">data cleaning, data validation, ETL (extractâ€“transformâ€“load)</p>
+                                    <p class="text-xs text-slate-300 pl-3.5">data cleaning, data validation, ETL (extract–transform–load)</p>
                                 </div>
                                 <div>
                                     <div class="font-extrabold text-teal-300 mb-0.5 flex items-center gap-2 text-xs">
@@ -892,7 +892,7 @@
                         <!-- Header -->
                         <div class="flex items-center gap-4 mb-5 pb-3.5 border-b border-slate-800/80">
                             <div class="w-12 h-12 rounded-2xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-emerald-500/30 text-2xl font-black shrink-0">
-                                ðŸ’»
+                                💻
                             </div>
                             <div>
                                 <span class="text-[11px] font-black text-emerald-400 uppercase tracking-widest block mb-0.5">Systems & Network</span>
@@ -1032,7 +1032,7 @@
 <!-- Footer -->
 <footer class="bg-white border-t border-slate-100 py-10 text-center">
     <a href="#" class="text-2xl font-extrabold tracking-tighter text-slate-900 inline-block mb-4">CHRIS<span class="text-emerald-500">.</span></a>
-    <p class="text-slate-500 font-medium text-sm mb-2">Â© 2026 Chris Teper Ferdiyanto. All rights reserved.</p>
+    <p class="text-slate-500 font-medium text-sm mb-2">© 2026 Chris Teper Ferdiyanto. All rights reserved.</p>
     <p class="text-slate-400 text-xs">Crafted cleanly with Laravel 11, Tailwind CSS & Swiper.js.</p>
 </footer>
 
